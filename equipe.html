@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Qui Sommes-Nous ? | Les Secrets de l'Automobile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&family=Outfit:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding-top: 150px;
+            padding-bottom: 4rem;
+            text-align: center;
+            background: linear-gradient(to bottom, #000, var(--bg-dark));
+        }
+
+        .text-content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ccc;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .team-grid {
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: var(--bg-card);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .team-photo {
+            height: 300px;
+            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            LS<span class="highlight">Auto</span>.
+            <span class="location-badge"><img src="https://flagcdn.com/w20/fr.png" alt="France"> Versailles</span>
+        </div>
+        <div class="burger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="stock.html">Notre Stock</a>
+            <a href="reprise.html">Vendre/Reprise</a>
+            <a href="equipe.html" class="active">Qui sommes-nous</a>
+            <a href="legal.html" style="font-size: 0.9em; opacity: 0.8;">Mentions Légales</a>
+            <a href="tel:+33761636206" class="btn-contact">07 61 63 62 06</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>L'Expertise <span class="highlight-text">Passion</span></h1>
+            <p>Plus qu'un mandataire, votre partenaire automobile de confiance à Versailles.</p>
+        </div>
+    </div>
+
+    <section class="content-section" style="padding: 0 0 4rem 0;">
+        <div class="container">
+            <div class="text-content">
+                <p>
+                    Passionnés d'automobile depuis toujours, nous avons fondé <strong>Les Secrets de
+                        l'Automobile</strong> avec une conviction simple : acheter ou vendre une voiture ne devrait
+                    jamais être une source de stress.
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    Notre mission est de rendre cette expérience <strong>plus simple, plus sûre et plus
+                        transparente</strong> pour nos clients. Forts de notre savoir-faire et d'un professionnalisme
+                    rigoureux, nous nous engageons à vous accompagner à chaque étape, que ce soit pour la vente de votre
+                    véhicule ou la recherche de la perle rare.
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    Nous bougeons les lignes en <strong>digitalisant le métier</strong> de mandataire. Fini la paperasse
+                    inutile et les déplacements superflus : nous mettons la technologie au service de votre confort,
+                    pour une transaction fluide et efficace.
+                </p>
+                <div style="margin-top: 3rem; text-align: center;">
+                    <a href="reprise.html" class="btn-primary">Confiez-nous votre projet</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Les Secrets de l'Automobile</div>
+            <p>Versailles, France • <a href="tel:+33761636206" style="color: inherit; text-decoration: none;">07 61 63
+                    62 06</a></p>
+            <div class="footer-links"
+                style="margin-top: 2rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <a href="equipe.html" style="color: #888; text-decoration: none;">Qui sommes-nous ?</a>
+                <a href="reprise.html" style="color: #888; text-decoration: none;">Vendre sa voiture</a>
+                <a href="stock.html" style="color: #888; text-decoration: none;">Voir le stock</a>
+            </div>
+            <div
+                style="margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem; font-size: 0.7rem; color: #444;">
+                &copy; 2026 - Les Secrets de l'Automobile • <a href="legal.html"
+                    style="color: #444; text-decoration: none;">Mentions Légales</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

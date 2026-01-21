@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lessecretsdelautomobile.netlify.app/sitemap.xml
