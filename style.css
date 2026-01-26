@@ -1,8 +1,7 @@
-/* CSS UPDATES FOR NEW STRUCTURE */
+/* CSS UPDATES FOR NEW STRUCTURE - REWRITE V4 */
 
 /* General adjustments */
 :root {
-    /* Keep existing vars */
     --bg-dark: #0a0a0a;
     --bg-card: #141414;
     --text-primary: #ffffff;
@@ -31,10 +30,9 @@
     border-radius: 2px;
 }
 
-/* Page Header (for subpages like Stock) */
+/* Page Header */
 .page-header {
     margin-top: 80px;
-    /* navbar height */
     padding: 4rem 10% 2rem;
     background: linear-gradient(to bottom, #111, var(--bg-dark));
     text-align: center;
@@ -163,28 +161,24 @@
 
     .side-photos {
         display: none;
-        /* Hide side photos on mobile to prevent layout breakage/blank space */
     }
 
     .main-photo {
         height: 300px;
         grid-column: 1 / -1;
-        /* Full width */
     }
 }
 
-/* MOBILE NAV */
+/* MOBILE NAV - CRITICAL FIX */
 .burger-menu {
     display: none;
     font-size: 1.5rem;
-    color: white;
+    color: white !important;
+    /* FORCE WHITE COLOR */
     cursor: pointer;
-    /* Increase touch target size */
     padding: 0.5rem;
     margin-right: -0.5rem;
-    /* compensate for padding */
     z-index: 2000;
-    /* Ensure SUPER high above overlay */
     position: relative;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
@@ -196,15 +190,11 @@
     }
 
     .nav-links {
-        /* display: none; Removed to allow transition */
         position: fixed;
-        /* Changed to fixed for full screen overlay */
         top: 0;
         right: -100%;
-        /* Start off-screen */
         left: auto;
         width: 70%;
-        /* Not full width allows clicking outside (optional, sticking to simple slide) */
         height: 100vh;
         z-index: 1500;
         background: rgba(10, 10, 10, 0.98);
@@ -214,15 +204,12 @@
         border-left: 1px solid rgba(255, 255, 255, 0.1);
         text-align: center;
         transition: right 0.4s ease-in-out;
-        /* Smooth slide effect */
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
         display: flex;
-        /* Always display but hide via position */
     }
 
     .nav-links.active {
         right: 0;
-        /* Slide in */
     }
 
     .nav-links a {
@@ -237,16 +224,6 @@
     .nav-links.active a {
         opacity: 1;
         transform: translateX(0);
-    }
-
-    .btn-contact {
-        display: inline-block;
-        margin-top: 2rem;
-        color: inherit !important;
-        /* Match other links */
-        text-decoration: none !important;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        /* Subtle border like others */
     }
 }
 
@@ -310,25 +287,34 @@ body {
     color: var(--text-primary);
 }
 
+/* BUTTON CONTACT WHATSAPP STYLE */
 .btn-contact {
-    border: 1px solid var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366;
+    /* WhatsApp Green */
+    color: white !important;
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
-    color: var(--accent) !important;
     font-weight: 700;
+    text-decoration: none;
+    border: none;
+    transition: background 0.3s;
 }
 
 .btn-contact:hover {
-    background: var(--accent);
-    color: black !important;
+    background: #128C7E;
+    color: white !important;
 }
 
+/* HERO IMAGE - AUDI (hero.png) */
 .hero {
     height: 80vh;
     min-height: 600px;
     width: 100%;
-    /* Use separate properties for better compatibility */
     background-image: url('hero.png') !important;
+    /* AUDI IMAGE */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -662,8 +648,10 @@ footer {
         padding: 4rem 5%;
     }
 }
+
 /* CONSTANT MOBILE FIX */
-html, body {
+html,
+body {
     overflow-x: hidden !important;
     width: 100%;
     position: relative;
