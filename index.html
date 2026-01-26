@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description"
-        content="Les Secrets de l'Automobile - Votre mandataire de confiance à Versailles. Achat, vente, reprise de véhicules et recherche personnalisée. Transparence et sécurité.">
-    <title>Les Secrets de l'Automobile | Mandataire & Reprise à Versailles</title>
+        content="NL AUTOMOBILE - Votre mandataire de confiance à Versailles. Achat, vente, reprise de véhicules et recherche personnalisée. Transparence et sécurité.">
+    <title>NL AUTOMOBILE | Mandataire & Reprise à Versailles</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,14 +32,14 @@
             <a href="reprise.html">Vendre/Reprise</a>
             <a href="equipe.html">Qui sommes-nous</a>
             <a href="legal.html" style="font-size: 0.9em; opacity: 0.8;">Mentions Légales</a>
-            <a href="tel:+33761636206" class="btn-contact">07 61 63 62 06</a>
+            <a href="https://wa.me/33761636206" class="btn-contact">07 61 63 62 06</a>
         </div>
     </nav>
 
     <section class="hero hero-home">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Les Secrets de l'Automobile <br><span class="highlight-text">Votre Expert</span></h1>
+            <h1>NL AUTOMOBILE <br><span class="highlight-text">Votre Expert</span></h1>
             <p class="hero-subtitle">ACHAT • VENTE • REPRISE • RECHERCHE PERSONNALISÉE</p>
             <p class="hero-desc">Comme une agence immobilière, nous gérons votre projet de A à Z.
                 Nous valorisons votre véhicule, filtrons les acheteurs et sécurisons la transaction financière.
@@ -114,7 +114,7 @@
                             class="fa-solid fa-star"></i>
                     </div>
                     <p style="font-style: italic; color: #ccc; margin-bottom: 1.5rem;">"Je n'arrivais pas à vendre mon
-                        Audi A1 depuis 2 mois. Les Secrets de l'Automobile s'en sont occupés : photos pro, annonce
+                        Audi A1 depuis 2 mois. NL AUTOMOBILE s'en sont occupés : photos pro, annonce
                         claire... Partie en 4 jours."</p>
                     <div class="client-info">
                         <strong style="display: block; color: white;">Sarah L.</strong>
@@ -142,49 +142,68 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section" style="padding-bottom: 2rem;">
         <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-box">
-                    <h3>Recherche Personnalisée</h3>
-                    <!-- REMPLACEZ 'VOTRE_ID_FORMSPREE' PAR VOTRE LIEN -->
-                    <form class="contact-form" action="https://formspree.io/f/mbddgzrj" method="POST">
-                        <input type="text" name="nom" placeholder="Votre Nom" required>
-                        <input type="email" name="email" placeholder="Votre Email" required>
-                        <input type="tel" name="telephone" placeholder="Votre Téléphone">
-                        <textarea name="demande"
-                            placeholder="Quel véhicule recherchez-vous ? (Modèle, Budget, Année...)"></textarea>
-                        <button type="submit" class="btn-submit">Envoyer ma demande</button>
-                    </form>
-                </div>
+            <div class="custom-search-form" style="max-width: 800px; margin: 0 auto;">
+                <h2 style="text-align: center;">Recherche & <span class="highlight-text">Estimation</span></h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--text-secondary);">Une demande
+                    particulière ou une reprise ? Remplissez ce formulaire.</p>
+                <form class="contact-form" action="https://formspree.io/f/mbddgzrj" method="POST">
+                    <input type="text" name="nom" placeholder="Votre Nom" required>
+                    <input type="email" name="email" placeholder="Votre Email" required>
+                    <input type="tel" name="telephone" placeholder="Votre Téléphone">
+                    <textarea name="demande"
+                        placeholder="Quel véhicule recherchez-vous ? Ou quelle voiture vendez-vous ? (Modèle, Km, Année...)"></textarea>
+                    <button type="submit" class="btn-submit" style="width: 100%;">Envoyer ma demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-                <div class="contact-info">
-                    <h2>Nous <span class="highlight-text">Contacter</span></h2>
-                    <p>Notre équipe est à votre disposition pour concrétiser votre projet.</p>
+    <!-- Section Contact Direct (Séparée avec fond différent) -->
+    <section id="contact-info"
+        style="background-color: var(--bg-card); padding: 4rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+            <div class="contact-info" style="margin: 0 auto; max-width: 900px; text-align: center;">
+                <h2>Nous <span class="highlight-text">Contacter</span></h2>
+                <p style="margin-bottom: 3rem; color: var(--text-secondary);">Une question rapide ? Passez par WhatsApp
+                    ou Email.</p>
 
-                    <div class="info-item">
-                        <i class="fa-solid fa-phone"></i>
+                <div class="contact-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+
+                    <!-- WhatsApp -->
+                    <div class="info-item"
+                        style="flex-direction: column; text-align: center; align-items: center; background: rgba(255,255,255,0.03);">
+                        <i class="fa-brands fa-whatsapp"
+                            style="font-size: 2.5rem; color: #25D366; background: none; padding: 0;"></i>
                         <div>
-                            <h4>Téléphone</h4>
-                            <p><a href="tel:+33761636206" style="color: inherit; text-decoration: none;">07 61 63 62
-                                    06</a></p>
+                            <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem;">WhatsApp</h4>
+                            <p><a href="https://wa.me/33761636206" class="btn-primary"
+                                    style="display: inline-block; padding: 0.5rem 1.5rem; margin-top: 0.5rem; border-radius: 50px; background: #25D366; color: white !important; border: none; font-size: 0.9rem;">Ouvrir
+                                    WhatsApp</a></p>
                         </div>
                     </div>
 
-                    <div class="info-item">
-                        <i class="fa-solid fa-envelope"></i>
+                    <!-- Email -->
+                    <div class="info-item"
+                        style="flex-direction: column; text-align: center; align-items: center; background: rgba(255,255,255,0.03);">
+                        <i class="fa-solid fa-envelope"
+                            style="font-size: 2.5rem; color: var(--accent); background: none; padding: 0;"></i>
                         <div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:lessecretsdelautomobile@gmail.com"
-                                    style="color: inherit; text-decoration: none;">lessecretsdelautomobile@gmail.com</a>
-                            </p>
+                            <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Email</h4>
+                            <p><a href="mailto:nlautomobile@gmail.com"
+                                    style="color: white; text-decoration: underline;">nlautomobile@gmail.com</a></p>
                         </div>
                     </div>
 
-                    <div class="info-item">
-                        <i class="fa-solid fa-location-dot"></i>
+                    <!-- Localisation -->
+                    <div class="info-item"
+                        style="flex-direction: column; text-align: center; align-items: center; background: rgba(255,255,255,0.03);">
+                        <i class="fa-solid fa-location-dot"
+                            style="font-size: 2.5rem; color: white; background: none; padding: 0;"></i>
                         <div>
-                            <h4>Localisation</h4>
+                            <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Localisation</h4>
                             <p>Versailles, France 🇫🇷</p>
                         </div>
                     </div>
@@ -195,8 +214,9 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">Les Secrets de l'Automobile</div>
-            <p>Versailles, France • <a href="tel:+33761636206" style="color: inherit; text-decoration: none;">07 61 63
+            <div class="footer-logo">NL AUTOMOBILE</div>
+            <p>Versailles, France • <a href="https://wa.me/33761636206"
+                    style="color: inherit; text-decoration: none;">07 61 63
                     62 06</a></p>
             <p>&copy; 2026 - Tous droits réservés.</p>
         </div>

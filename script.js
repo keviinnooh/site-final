@@ -200,7 +200,7 @@ function loadDetail() {
     document.getElementById('detailImageSide2').src = car.images[2] || car.images[0];
 
     document.getElementById('detailTitle').innerHTML = `${car.brand} ${car.model} <span class="highlight-text">${car.trim}</span>`;
-    document.getElementById('detailSubtitle').textContent = `${car.hp} • ${car.year} • ${car.km} • Garantie 6 mois`;
+    document.getElementById('detailSubtitle').textContent = `${car.hp} • ${car.year} • ${car.km} • Garantie 3 mois`;
     // Inject Description
     const descEl = document.getElementById('detailDesc');
     if (descEl) descEl.textContent = car.desc;
