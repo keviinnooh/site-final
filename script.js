@@ -232,6 +232,12 @@ function loadDetail() {
 
     // Prix
     document.getElementById('detailPrice').textContent = car.price;
+
+    // WhatsApp Dynamic Link
+    const waBtn = document.getElementById('whatsappDetailBtn');
+    if (waBtn) {
+        waBtn.href = `https://wa.me/33761636206?text=Bonjour,%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20${car.brand}%20${car.model}%20(${car.price})`;
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
