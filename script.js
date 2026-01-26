@@ -141,17 +141,9 @@ function renderCars(filter = 'Tout') {
                 </div>
                 <div class="car-footer">
                     <span class="car-price">${car.price}</span>
-                    <div style="display: flex; gap: 5px;">
-                        <a href="https://wa.me/33761636206?text=Bonjour,%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20${car.brand}%20${car.model}" 
-                           target="_blank" 
-                           class="btn-car" 
-                           style="background: #25D366; border: none; padding: 0.5rem 0.8rem; border-radius: 5px;">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                        <a href="detail.html?id=${car.id}" class="btn-car">
-                            Voir <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
+                    <a href="detail.html?id=${car.id}" class="btn-car">
+                        Voir Fiche <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         `;
