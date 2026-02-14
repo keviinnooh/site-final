@@ -112,6 +112,44 @@ const cars = [
         options: [
             "Pack S-Line Int/Ext", "Hayon électrique", "Smartphone Interface", "Audi Drive Select", "Phares LED Matrix", "Virtual Cockpit plus"
         ]
+    },
+    {
+        id: 6,
+        brand: "Yamaha",
+        model: "Ténéré 700",
+        trim: "Rally Edition",
+        year: 2023,
+        price: "10 900 €",
+        hp: "74 ch",
+        fuel: "Essence",
+        images: ["https://images.yamaha-motor.eu/product/5815/05/Tenere700-Rally-Edition-Blue-Static-002.jpg?quality=80&width=1000", "https://images.yamaha-motor.eu/product/5815/05/Tenere700-Rally-Edition-Blue-Action-001.jpg?quality=80&width=1000", "https://images.yamaha-motor.eu/product/5815/05/Tenere700-Rally-Edition-Blue-Detail-003.jpg?quality=80&width=1000"],
+        km: "3 500 km",
+        gearbox: "Manuelle",
+        color: "Heritage White",
+        category: "Motos",
+        desc: "L'esprit Rallye pur. La Ténéré 700 est la référence du Trail Aventure mid-size. Moteur CP2 coupleux et fiable, suspensions à grand débattement, protection moteur renforcée. Prête pour le désert ou le quotidien.",
+        options: [
+            "Sabot moteur alu", "Silencieux Akrapovic", "Selle Rallye", "Clignotants LED", "Protections de réservoir", "ABS Déconnectable"
+        ]
+    },
+    {
+        id: 7,
+        brand: "Yamaha",
+        model: "TMAX 560",
+        trim: "Tech MAX",
+        year: 2024,
+        price: "14 500 €",
+        hp: "47 ch",
+        fuel: "Essence",
+        images: ["https://images.yamaha-motor.eu/product/5341/01/2022-Yamaha-TMAX-Tech-MAX-EU-Dark-Petrol-Studio-001-03.jpg?quality=80&width=1000", "https://images.yamaha-motor.eu/product/5341/01/2022-Yamaha-TMAX-Tech-MAX-EU-Dark-Petrol-Action-002-03.jpg?quality=80&width=1000", "https://images.yamaha-motor.eu/product/5341/01/2022-Yamaha-TMAX-Tech-MAX-EU-Power-Grey-Detail-005-03.jpg?quality=80&width=1000"],
+        km: "1 200 km",
+        gearbox: "Automatique",
+        color: "Dark Petrol",
+        category: "Motos",
+        desc: "Le Roi des Maxi-Scooters. Version Tech MAX toutes options : Bulle électrique, régulateur de vitesse, poignées chauffantes, écran TFT connecté. Performance sportive et confort absolu pour la ville et l'autoroute.",
+        options: [
+            "Bulle électrique", "Poignées & Selle chauffantes", "Régulateur de vitesse", "Écran TFT 7 pouces", "Démarrage sans clé", "Dosseret passager"
+        ]
     }
 ];
 
