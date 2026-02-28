@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - NL AUTOMOBILE</title>
+    <meta name="description"
+        content="Foire aux questions concernant la vente, l'achat et la reprise de véhicules chez NL AUTOMOBILE.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo" style="text-decoration: none; color: white;">
+            CAR <span class="highlight">DEALER</span>.
+            <span class="location-badge"><img src="https://flagcdn.com/w20/fr.png" alt="France"> Versailles</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="stock.html">Notre Stock</a>
+            <a href="reprise.html">Vendre/Reprise</a>
+            <a href="equipe.html">Qui sommes-nous</a>
+            <a href="legal.html" style="font-size: 0.9em;">Mentions Légales</a>
+            <a href="https://wa.me/33761636206" class="btn-contact"><i class="fa-brands fa-whatsapp"></i> 07 61 63 62
+                06</a>
+        </div>
+        <div class="burger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <div style="padding-top: 100px;"></div>
+
+    <section class="faq-section" style="padding: 4rem 0; min-height: 70vh;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Foire Aux <span class="highlight-text">Questions</span></h2>
+                <p>Retrouvez ici toutes les réponses à vos questions.</p>
+            </div>
+
+            <div class="faq-tabs"
+                style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <button class="faq-tab-btn active" data-tab="vente"
+                    style="background: var(--accent); color: black; border: none; padding: 10px 20px; font-weight: bold; border-radius: 5px; cursor: pointer; transition: 0.3s; font-family: var(--font-heading);">Je
+                    veux Vendre</button>
+                <button class="faq-tab-btn" data-tab="achat"
+                    style="background: transparent; color: white; border: 1px solid var(--accent); padding: 10px 20px; font-weight: bold; border-radius: 5px; cursor: pointer; transition: 0.3s; font-family: var(--font-heading);">Je
+                    veux Acheter</button>
+            </div>
+
+            <div class="faq-accordion" style="max-width: 800px; margin: 0 auto; margin-top: 1rem;">
+
+                <!-- CONTENU ONGLET VENTE -->
+                <div class="faq-tab-content active" id="tab-vente">
+
+                    <!-- Question 1 (Ancienne 1) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>1. Concept et comment ça marche ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>NL AUTOMOBILE fonctionne comme une agence immobilière pour vos véhicules (Auto & Moto).
+                                Si
+                                vous vendez, nous gérons tout de A à Z (annonce, appels, sécurité du paiement) pendant
+                                que
+                                vous continuez à rouler. Si vous achetez, nous trouvons votre véhicule idéal sur le
+                                marché
+                                européen et nous nous occupons de toutes les démarches jusqu'à la livraison.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 (Ancienne 8) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>2. Quelle est la différence entre une concession classique et NL AUTOMOBILE
+                                ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Plutôt qu'une concession classique, nous agissons avant tout comme un tiers de confiance
+                                expert de l'Auto et Moto. Au lieu d'acheter massivement des véhicules pour les revendre
+                                avec
+                                une grosse marge, nous connectons vendeurs et acheteurs en sécurisant la transaction à
+                                100%.
+                                Ce modèle "d'agence", avec moins de frais de structure lourds, vous permet d'obtenir un
+                                meilleur prix de vente ou d'achat de votre véhicule, le tout avec des garanties
+                                professionnelles strictes (historique, garantie mécanique, paiement sécurisé).</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 (Ancienne 5) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>3. Comment déterminez-vous le prix de vente de mon véhicule ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Nous faisons une estimation précise basée sur le marché actuel, l'état, le kilométrage et
+                                les
+                                options, pour le vendre au meilleur prix possible. L'objectif est de trouver le point
+                                d'équilibre parfait pour une vente rapide tout en maximisant votre bénéfice.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 (Ancienne 7) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>4. Qui décide du prix de vente final ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>C'est vous ! En tant que vendeur, vous restez le seul décisionnaire du prix de votre
+                                véhicule. Notre rôle est de vous accompagner et de vous conseiller, grâce à notre
+                                analyse
+                                constante du marché actuel, pour vous aider à fixer le meilleur prix possible.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 (Ancienne 2) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>5. Combien coûte le service ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Notre service est <strong>totalement gratuit</strong> pour le vendeur. Notre objectif est
+                                de
+                                vous faire gagner du temps et de l'argent : nous valorisons votre véhicule à son
+                                meilleur
+                                prix sur le marché.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 (Ancienne 9) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>6. Dois-je retirer mon annonce personnelle une fois le mandat signé ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Oui, absolument. Dès la signature du mandat, votre conseiller NL AUTOMOBILE prend le
+                                relais
+                                et s'occupe de tout. Retirer votre annonce personnelle permet d'éviter les doublons sur
+                                internet. Cela garantit la cohérence du prix, renforce la fiabilité de notre annonce
+                                professionnelle, et rassure immédiatement les acheteurs potentiels.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 7 (Ancienne 4) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>7. Est-ce que je peux continuer à utiliser mon véhicule pendant la vente ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Oui, vous gardez votre véhicule et continuez à rouler avec ! Nous organisons les visites
+                                ou
+                                les essais uniquement selon vos disponibilités pour ne pas vous déranger au quotidien.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Question 8 (Ancienne 6) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>8. Combien de temps faut-il en moyenne pour vendre ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Grâce à notre réseau, notre expertise du marché et notre mise en valeur professionnelle
+                                de
+                                votre véhicule (photos, descriptions detallées), la grande majorité des véhicules qui
+                                nous
+                                sont confiés se vendent en moins de 3 à 4 semaines.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 9 (Ancienne 3) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>9. Comment est sécurisé le paiement de mon véhicule ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>La sécurité financière est notre priorité absolue. Lors de la vente, les fonds de
+                                l'acheteur
+                                transitent intégralement par un <strong>compte séquestre</strong>, géré par un
+                                établissement
+                                bancaire partenaire agréé par la Banque de France. Exactement comme chez un notaire lors
+                                d'une vente immobilière, vous avez la certitude que l'argent est disponible et bloqué
+                                pour
+                                vous avant même de remettre les clés du véhicule. Fini le stress des faux chèques de
+                                ou des virements annulés.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 10 (Documents vente) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>10. Quels documents dois-je préparer pour la vente de mon véhicule ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Afin de finaliser la vente dans les règles de l'art et rassurer les potentiels acheteurs,
+                                voici les pièces indispensables à regrouper :</p>
+                            <ul
+                                style="list-style-type: disc; margin-left: left; padding-left: 1.5rem; margin-top: 1rem; color: #ccc;">
+                                <li style="margin-bottom: 0.5rem;"><strong>L'original de la carte grise</strong>
+                                    (certificat d'immatriculation) à votre nom.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong>Un certificat de non-gage</strong> (situation
+                                    administrative) très récent (moins de 15 jours).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong>Le bilan du contrôle technique</strong>
+                                    datant de moins de 6 mois (si le véhicule a plus de 4 ans).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong>Vos documents personnels :</strong> une pièce
+                                    d'identité valide et un justificatif de domicile de moins de 3 mois.</li>
+                                <li><strong>Le carnet d'entretien complété, vos factures et le double des clés.</strong>
+                                    C'est le grand secret pour inspirer confiance et valoriser votre véhicule au prix
+                                    fort !</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- FIN CONTENU ONGLET VENTE -->
+
+                <!-- CONTENU ONGLET ACHAT -->
+                <div class="faq-tab-content" id="tab-achat" style="display: none;">
+
+                    <!-- Question 1 (Garantie) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>1. Les véhicules d'occasion sont-ils sous garantie ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolument. La tranquillité d'esprit de nos conducteurs est primordiale. Tous nos
+                                véhicules (auto et moto) sont minutieusement inspectés avant leur mise en vente.
+                                Pour
+                                vous affranchir de toute mauvaise surprise, chaque véhicule est systématiquement
+                                vendu
+                                avec une <strong>garantie contractuelle de 3 mois</strong> (couvrant les éléments
+                                majeurs comme le moteur, la boîte et le pont). Selon vos besoins, des extensions de
+                                garantie plus longues et plus complètes sont également disponibles sur devis.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 (Historique) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>2. Comment êtes-vous sûr de la fiabilité et de l'historique d'un véhicule ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>La transparence est au cœur de notre démarche. Avant chaque mise en vente, nous retraçons
+                                l'historique complet du véhicule (entretiens, factures). De plus, nous utilisons
+                                systématiquement des outils officiels certifiés par l'État (comme Histovec) pour
+                                garantir la conformité du véhicule (kilométrage réel, absence de gage, historique des
+                                sinistres). Notre but : vous assurer un achat serein, sans aucune mauvaise surprise à
+                                l'avenir.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 (Processus d'achat) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>3. Comment se déroule l'achat d'un véhicule ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tout commence par un premier contact avec notre conseiller commercial dédié. Pour vous
+                                offrir une transparence totale, avant tout déplacement, nous vous présentons le véhicule
+                                en appel visio en direct. Nous vous transmettons également un dossier complet (photos
+                                sous tous les angles, vidéos, historique complet, et focus sur les moindres traces
+                                éventuelles). Vous achetez en parfaite connaissance de cause, sans risque de déception
+                        </div>
+                    </div>
+
+                    <!-- Question 4 (Paiement Sécurisé) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>4. Comment s'effectue le règlement du véhicule ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>La sécurité financière est notre priorité absolue, pour vous comme pour le vendeur. Le
+                                règlement s'effectue exclusivement via un <strong>compte séquestre sécurisé</strong>,
+                                géré par un établissement bancaire partenaire agréé par la Banque de France. Exactement
+                                comme chez un notaire, vos fonds sont bloqués en toute sécurité jusqu'à la finalisation
+                                de la vente et la remise des clés. Fini l'angoisse des fraudes, des délais de virement
+                                de dernière minute, ou l'obligation de se déplacer avec un chèque de banque.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 (Livraison) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>5. Est-il possible de me faire livrer mon nouveau véhicule ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Oui, tout à fait ! Nous offrons un service de livraison sur-mesure directement à votre
+                                domicile ou sur votre lieu de travail, et ce partout en France. Une fois le véhicule
+                                réservé et préparé, notre transporteur partenaire vous l'achemine en toute sécurité.
+                                Ainsi, vous n'avez pas besoin de prévoir de déplacement coûteux ni de poser de jour de
+                                congé, vous recevez vos clés directement chez vous.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 (Achat à distance) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>6. J'habite loin de l'agence (ex: dans le Sud), comment se passe l'achat ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Notre processus est entièrement digitalisé pour vous permettre d'acheter votre véhicule à
+                                distance en toute confiance. Aujourd'hui, <strong>8 véhicules sur 10</strong> que nous
+                                vendons le sont sur photos et vidéos, sans visite physique préalable ! Du mandat
+                                électronique à la présentation visio ultra-détaillée (Question 3), jusqu'à la livraison
+                                à domicile et au paiement sécurisé, vous bénéficiez du même niveau d'exigence et de
+                                tranquillité d'esprit que si vous étiez sur place.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 7 (Réservation via acompte) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>7. Comment bloquer et réserver le véhicule qui m'intéresse ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Dès qu'un véhicule vous plaît, il est très important de le sécuriser rapidement. Pour
+                                bloquer fermement la vente et retirer le véhicule du marché public, nous demandons
+                                simplement le versement d'un <strong>acompte de réservation</strong>. Cela vous offre la
+                                garantie que le véhicule vous est exclusivement réservé durant le processus de
+                                sécurisation, dans l'attente du règlement final et de la livraison.</p>
+                        </div>
+                    </div>
+
+                    <!-- Question 8 (Administratif) -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <strong>8. Comment se passent les démarches administratives et la cession ?</strong>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Oubliez la paperasse ! Chez NL AUTOMOBILE, nous nous occupons de l'intégralité des
+                                démarches administratives à votre place. De la déclaration de cession jusqu'à l'édition
+                                de votre nouvelle carte grise, notre équipe gère tout. Vous n'avez pas besoin de vous
+                                casser la tête avec le site de l'ANTS, vous repartez avec votre véhicule l'esprit léger
+                                et les papiers en règle.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- FIN CONTENU ONGLET ACHAT -->
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">NL AUTOMOBILE</div>
+            <p>Versailles, France • <a href="https://wa.me/33761636206"
+                    style="color: inherit; text-decoration: none;">07 61 63
+                    62 06</a></p>
+            <div class="footer-legal-links" style="margin-top: 1.5rem; font-size: 0.9rem;">
+                <a href="faq.html" style="color: #888; text-decoration: none; margin-right: 15px;">FAQ</a>
+                <a href="legal.html" style="color: #888; text-decoration: none; margin-right: 15px;">Mentions
+                    Légales</a>
+                <a href="cgv.html" style="color: #888; text-decoration: none;">CGV</a>
+            </div>
+            <p style="margin-top: 1rem;">&copy; 2026 - Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

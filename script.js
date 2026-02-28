@@ -321,4 +321,57 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            // Close other answers
+            faqQuestions.forEach(q => {
+                if (q !== question) {
+                    q.classList.remove('active');
+                    const ans = q.nextElementSibling;
+                    if (ans) ans.style.maxHeight = null;
+                }
+            });
+
+            // Toggle current answer
+            question.classList.toggle('active');
+            const answer = question.nextElementSibling;
+            if (question.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = null;
+            }
+        });
+    });
+
+    // FAQ Tabs Logic
+    const faqTabBtns = document.querySelectorAll('.faq-tab-btn');
+    const faqTabContents = document.querySelectorAll('.faq-tab-content');
+
+    if (faqTabBtns.length > 0) {
+        faqTabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active classes
+                faqTabBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.style.background = 'transparent';
+                    b.style.color = 'white';
+                    b.style.border = '1px solid var(--accent)';
+                });
+                faqTabContents.forEach(c => c.style.display = 'none');
+
+                // Add active class to clicked button
+                btn.classList.add('active');
+                btn.style.background = 'var(--accent)';
+                btn.style.color = 'black';
+                btn.style.border = 'none';
+
+                // Show corresponding content
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById('tab-' + tabId).style.display = 'block';
+            });
+        });
+    }
 });
