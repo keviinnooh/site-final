@@ -26,31 +26,32 @@
             <i class="fa-solid fa-bars"></i>
         </div>
         <div class="nav-links">
-            <a href="index.html" class="active">Accueil</a>
+            <a href="#accueil" class="active">Accueil</a>
             <a href="#services">Services</a>
-            <a href="stock.html">Notre Stock</a>
-            <a href="reprise.html">Vendre/Reprise</a>
-            <a href="equipe.html">Qui sommes-nous</a>
+            <a href="#stock">Notre Stock</a>
+            <a href="#reprise">Vendre/Reprise</a>
+            <a href="#equipe">Qui sommes-nous</a>
             <a href="https://wa.me/33761636206" class="btn-contact"><i class="fa-brands fa-whatsapp"></i> 07 61 63 62
                 06</a>
         </div>
     </nav>
 
-    <section class="hero hero-home">
+    <section id="accueil" class="hero hero-home">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>NL AUTOMOBILE</h1>
-            <p class="hero-subtitle">ACHAT • VENTE • DÉPÔT-VENTE • RECHERCHE PERSONNALISÉE • AUTO & MOTO</p>
+            <p class="hero-subtitle" style="font-size: clamp(0.55rem, 2vw, 0.9rem); white-space: nowrap;">ACHAT • VENTE
+                • DÉPÔT-VENTE • RECHERCHE PERSONNALISÉE • AUTO & MOTO</p>
             <p class="hero-desc">Comme une agence immobilière, nous gérons votre projet de A à Z.
                 Nous valorisons votre véhicule (2 ou 4 roues), filtrons les acheteurs et sécurisons la transaction.
                 <br><strong>0 Stress, 100% Transparent.</strong>
             </p>
             <div class="hero-btns"
                 style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 600px; margin-top: 2rem;">
-                <a href="reprise.html" class="btn-grid-home">Vendre Auto</a>
-                <a href="reprise.html" class="btn-grid-home">Vendre Moto</a>
-                <a href="stock.html" class="btn-grid-home">Acheter Auto</a>
-                <a href="stock.html" class="btn-grid-home">Acheter Moto</a>
+                <a href="#reprise" class="btn-grid-home">Vendre Auto</a>
+                <a href="#reprise" class="btn-grid-home">Vendre Moto</a>
+                <a href="#stock" class="btn-grid-home">Acheter Auto</a>
+                <a href="#stock" class="btn-grid-home">Acheter Moto</a>
             </div>
         </div>
     </section>
@@ -148,25 +149,137 @@
     </section>
     <!-- Fin Section Avis -->
 
-
-
-    <section id="contact" class="contact-section" style="padding-bottom: 2rem;">
+    <!-- SECTION STOCK -->
+    <section id="stock" class="stock-section" style="padding: 4rem 0;">
         <div class="container">
-            <div class="custom-search-form" style="max-width: 800px; margin: 0 auto;">
-                <h2 style="text-align: center;">Recherche & <span class="highlight-text">Estimation</span></h2>
-                <p style="text-align: center; margin-bottom: 2rem; color: var(--text-secondary);">Une demande
-                    particulière ou une reprise ? Remplissez ce formulaire.</p>
-                <form class="contact-form" action="https://formspree.io/f/mbddgzrj" method="POST">
-                    <input type="text" name="nom" placeholder="Votre Nom" required>
-                    <input type="email" name="email" placeholder="Votre Email" required>
-                    <input type="tel" name="telephone" placeholder="Votre Téléphone">
-                    <textarea name="demande"
-                        placeholder="Quel véhicule recherchez-vous ? Ou quelle voiture vendez-vous ? (Modèle, Km, Année...)"></textarea>
-                    <button type="submit" class="btn-submit" style="width: 100%;">Envoyer ma demande</button>
+            <div class="section-header">
+                <h2>Notre <span class="highlight-text">Showroom</span></h2>
+                <p>Découvrez nos véhicules disponibles immédiatement. Inspectés et Garantis.</p>
+            </div>
+            <!-- Filtres simplifiés -->
+            <div class="filters-bar">
+                <button class="filter-btn active">Tout</button>
+                <button class="filter-btn">Citadines</button>
+                <button class="filter-btn">Sportives</button>
+                <button class="filter-btn">SUV</button>
+                <button class="filter-btn">Motos</button>
+            </div>
+
+            <div class="cars-grid" id="carsGrid">
+                <!-- Cars injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION REPRISE / VENTE -->
+    <section id="reprise">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; font-family: var(--font-heading);">Estimez votre <span
+                    class="highlight-text">Véhicule</span></h2>
+            <p style="color: #ccc; max-width: 600px; margin: 1rem auto; margin-bottom: 3rem;">Remplissez ce formulaire
+                pour recevoir une
+                offre de reprise ou de dépôt-vente sous 24h. Simple, rapide et sans engagement.</p>
+
+            <div class="form-container">
+                <form action="https://formspree.io/f/mbddgzrj" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>Informations Véhicule</label>
+                        <div class="form-row">
+                            <input type="text" name="marque" class="form-control" placeholder="Marque (ex: Audi)"
+                                required>
+                            <input type="text" name="modele" class="form-control" placeholder="Modèle (ex: A3)"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-row">
+                            <input type="number" name="annee" class="form-control" placeholder="Année (ex: 2019)">
+                            <input type="text" name="kilometrage" class="form-control"
+                                placeholder="Kilométrage (ex: 45000)">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="finition" class="form-control"
+                            placeholder="Finition / Moteur (ex: S-Line 150ch)">
+                    </div>
+
+                    <div class="form-group">
+                        <label>État & Photos</label>
+                        <div class="file-upload" onclick="document.getElementById('photoInput').click()">
+                            <i class="fa-solid fa-camera fa-2x" style="color: var(--accent); margin-bottom: 1rem;"></i>
+                            <p>Cliquez pour ajouter des photos (Extérieur, Intérieur, Carte Grise...)</p>
+                            <span style="font-size: 0.8rem; color: #888;">Formats: JPG, PNG. Max 5 Mo.</span>
+                            <div id="fileList" style="margin-top: 1rem; color: var(--accent); font-size: 0.9rem;"></div>
+                        </div>
+                        <input type="file" id="photoInput" name="photos" multiple style="display: none;"
+                            onchange="updateFileList()">
+                    </div>
+
+                    <script>
+                        function updateFileList() {
+                            const input = document.getElementById('photoInput');
+                            const list = document.getElementById('fileList');
+                            if (input.files.length > 0) {
+                                list.innerHTML = `<strong>${input.files.length} photo(s) sélectionnée(s)</strong>`;
+                            } else {
+                                list.innerHTML = '';
+                            }
+                        }
+                    </script>
+
+                    <div class="form-group">
+                        <label>Vos Coordonnées</label>
+                        <div class="form-row">
+                            <input type="text" name="nom" class="form-control" placeholder="Votre Nom" required>
+                            <input type="tel" name="telephone" class="form-control" placeholder="Téléphone" required>
+                        </div>
+                        <input type="email" name="email" class="form-control" placeholder="Email"
+                            style="margin-top: 1rem;" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary"
+                        style="width: 100%; margin-top: 1rem; border: none; cursor: pointer;">Soumettre mon
+                        dossier</button>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 1rem;">Vos données sont confidentielles et
+                        servent uniquement à l'étude de votre dossier.</p>
                 </form>
             </div>
         </div>
     </section>
+
+    <!-- SECTION EQUIPE -->
+    <section id="equipe" class="content-section" style="padding: 6rem 0; background: var(--bg-dark);">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <h2>L'Expertise <span class="highlight-text">Passion</span></h2>
+                <p>Plus qu'un mandataire, votre partenaire automobile de confiance à Versailles.</p>
+            </div>
+
+            <div class="text-content" style="max-width: 800px; margin: 0 auto; text-align: center; color: #ccc;">
+                <p>
+                    Passionnés d'automobile et de moto depuis toujours, nous avons fondé <strong>NL AUTOMOBILE</strong>
+                    avec une conviction simple : acheter ou vendre un véhicule ne devrait jamais être une source de
+                    stress.
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    Notre mission est de rendre cette expérience <strong>plus simple, plus sûre et plus
+                        transparente</strong>
+                    pour nos clients. Forts de notre savoir-faire sur le marché Auto & 2 Roues, nous nous engageons à
+                    vous
+                    accompagner à chaque étape.
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    Nous bougeons les lignes en <strong>digitalisant le métier</strong> de mandataire. Fini la paperasse
+                    inutile et les déplacements superflus : nous mettons la technologie au service de votre confort,
+                    pour une transaction fluide et efficace.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Section Contact Direct (Séparée avec fond différent) -->
     <section id="contact-info"
