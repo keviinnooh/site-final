@@ -360,6 +360,10 @@ h1 {
     /* Garanti sur une seule ligne pour PC */
 }
 
+.mobile-break {
+    display: none;
+}
+
 .hero-desc {
     color: var(--text-secondary);
     font-size: clamp(0.9rem, 1.5vw, 1.2rem);
@@ -768,6 +772,10 @@ footer {
         white-space: normal;
         /* Autorise le retour à la ligne */
         word-break: break-word;
+    }
+
+    .mobile-break {
+        display: block;
     }
 
     .hero-desc {
