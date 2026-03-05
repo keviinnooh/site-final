@@ -803,7 +803,7 @@ footer {
         /* Force le wrap sur les petits ecrans <= 280px */
     }
 
-    /* SCROLL HORIZONTAL MOBILE : STOCK ET AVIS */
+    /* SCROLL HORIZONTAL MOBILE : STOCK ET AVIS pleine largeur */
     .cars-grid,
     .reviews-grid {
         display: flex !important;
@@ -812,10 +812,14 @@ footer {
         overflow-y: hidden;
         scroll-snap-type: x mandatory;
         padding-bottom: 1.5rem;
-        gap: 1.5rem !important;
+        gap: 1rem !important;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
-        /* Firefox */
+        /* Contourne le conteneur pour aller de bord à bord */
+        margin-left: -5%;
+        margin-right: -5%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .cars-grid::-webkit-scrollbar,
@@ -826,10 +830,12 @@ footer {
 
     .car-card,
     .review-card {
-        min-width: 85vw !important;
-        /* Laisse apparaitre un bout de la prochaine carte */
+        width: 80vw !important;
+        min-width: 80vw !important;
         flex: 0 0 auto !important;
         scroll-snap-align: center;
+        padding: 1.5rem !important;
+        /* Optimisation espace mobile */
     }
 }
 
