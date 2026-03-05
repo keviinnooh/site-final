@@ -43,14 +43,13 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>NL AUTOMOBILE</h1>
-            <p class="hero-subtitle" style="font-size: clamp(0.55rem, 2vw, 0.9rem); white-space: nowrap;">ACHAT • VENTE
+            <p class="hero-subtitle">ACHAT • VENTE
                 • DÉPÔT-VENTE • RECHERCHE PERSONNALISÉE • AUTO & MOTO</p>
             <p class="hero-desc">Comme une agence immobilière, nous gérons votre projet de A à Z.
                 Nous valorisons votre véhicule (2 ou 4 roues), filtrons les acheteurs et sécurisons la transaction.
                 <br><strong>0 Stress, 100% Transparent.</strong>
             </p>
-            <div class="hero-btns"
-                style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 600px; margin-top: 2rem;">
+            <div class="hero-btns">
                 <a href="#vente" class="btn-grid-home">Vendre Auto</a>
                 <a href="#vente" class="btn-grid-home">Vendre Moto</a>
                 <a href="#achat" class="btn-grid-home">Acheter Auto</a>
@@ -362,53 +361,77 @@
     <!-- Fin Section Avis -->
 
     <!-- Section Contact Direct avec formulaire -->
-    <section id="contact" style="background-color: var(--bg-card); padding: clamp(2rem, 5vw, 4rem) 0; border-top: 1px solid rgba(255,255,255,0.05);">
+    <section id="contact"
+        style="background-color: var(--bg-card); padding: clamp(2rem, 5vw, 4rem) 0; border-top: 1px solid rgba(255,255,255,0.05);">
         <div class="container">
             <div class="contact-info" style="margin: 0 auto; max-width: 1000px; text-align: center;">
                 <h2>Nous <span class="highlight-text">Contacter</span></h2>
-                <p style="margin-bottom: 2rem; color: var(--text-secondary);">Envoyez-nous un message pour votre projet, ou contactez-nous directement !</p>
+                <p style="margin-bottom: 2rem; color: var(--text-secondary);">Envoyez-nous un message pour votre projet,
+                    ou contactez-nous directement !</p>
 
                 <!-- Form -->
-                <div class="form-container" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: clamp(1.5rem, 5vw, 3rem); text-align: center; max-width: 800px; margin: 0 auto 4rem auto; overflow: hidden; box-sizing: border-box;">
+                <div class="form-container"
+                    style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: clamp(1.5rem, 5vw, 3rem); text-align: center; max-width: 800px; margin: 0 auto 4rem auto; overflow: hidden; box-sizing: border-box;">
                     <h3 style="font-size: 1.8rem; margin-bottom: 2rem; color: white;">Envoyez un message</h3>
-                    <form action="https://formspree.io/f/mbddgzrj" method="POST" style="text-align: left; width: 100%; box-sizing: border-box;">
+                    <form action="https://formspree.io/f/mbddgzrj" method="POST"
+                        style="text-align: left; width: 100%; box-sizing: border-box;">
                         <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                            <input type="text" name="nom" class="form-control" placeholder="Votre Nom" required style="flex: 1 1 200px; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; width: 100%; box-sizing: border-box;">
-                            <input type="email" name="email" class="form-control" placeholder="Votre Email" required style="flex: 1 1 200px; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; width: 100%; box-sizing: border-box;">
+                            <input type="text" name="nom" class="form-control" placeholder="Votre Nom" required
+                                style="flex: 1 1 200px; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; width: 100%; box-sizing: border-box;">
+                            <input type="email" name="email" class="form-control" placeholder="Votre Email" required
+                                style="flex: 1 1 200px; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; width: 100%; box-sizing: border-box;">
                         </div>
                         <div class="form-group" style="margin-bottom: 1.5rem; width: 100%; box-sizing: border-box;">
-                            <input type="tel" name="telephone" class="form-control" placeholder="Votre TÃ©lÃ©phone" style="width: 100%; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; box-sizing: border-box;">
+                            <input type="tel" name="telephone" class="form-control" placeholder="Votre TÃ©lÃ©phone"
+                                style="width: 100%; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; box-sizing: border-box;">
                         </div>
                         <div class="form-group" style="margin-bottom: 1.5rem; width: 100%; box-sizing: border-box;">
-                            <textarea name="message" class="form-control" placeholder="Votre projet ou question..." rows="5" required style="width: 100%; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; resize: vertical; box-sizing: border-box;"></textarea>
+                            <textarea name="message" class="form-control" placeholder="Votre projet ou question..."
+                                rows="5" required
+                                style="width: 100%; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; resize: vertical; box-sizing: border-box;"></textarea>
                         </div>
-                        <button type="submit" class="btn-primary" style="width: 100%; border: none; padding: 1.2rem; font-size: 1.1rem; cursor: pointer; border-radius: 10px;">
+                        <button type="submit" class="btn-primary"
+                            style="width: 100%; border: none; padding: 1.2rem; font-size: 1.1rem; cursor: pointer; border-radius: 10px;">
                             <i class="fa-solid fa-paper-plane" style="margin-right: 10px;"></i> Envoyer le message
                         </button>
                     </form>
                 </div>
 
                 <!-- Onglets Contact -->
-                <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div class="contact-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
                     <!-- WhatsApp -->
-                    <div class="info-item" style="height: 100%; display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); padding: 2.5rem; border-radius: 15px;">
-                        <i class="fa-brands fa-whatsapp" style="font-size: 2.5rem; color: #25D366; background: none; padding: 0; margin-bottom: 1.5rem;"></i>
+                    <div class="info-item"
+                        style="height: 100%; display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); padding: 2.5rem; border-radius: 15px;">
+                        <i class="fa-brands fa-whatsapp"
+                            style="font-size: 2.5rem; color: #25D366; background: none; padding: 0; margin-bottom: 1.5rem;"></i>
                         <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem; color: white;">WhatsApp</h4>
-                        <p style="margin-top: auto; width: 100%;"><a href="https://wa.me/33761636206" class="btn-primary" style="display: inline-block; padding: 0.8rem 1.5rem; margin-top: 1rem; border-radius: 50px; background: #25D366; color: white !important; border: none; font-size: 0.9rem; white-space: nowrap;">Ouvrir</a></p>
+                        <p style="margin-top: auto; width: 100%;"><a href="https://wa.me/33761636206"
+                                class="btn-primary"
+                                style="display: inline-block; padding: 0.8rem 1.5rem; margin-top: 1rem; border-radius: 50px; background: #25D366; color: white !important; border: none; font-size: 0.9rem; white-space: nowrap;">Ouvrir</a>
+                        </p>
                     </div>
 
                     <!-- Email -->
-                    <div class="info-item" style="height: 100%; display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); padding: 2.5rem; border-radius: 15px; overflow-wrap: anywhere; word-break: break-all;">
-                        <i class="fa-solid fa-envelope" style="font-size: 2.5rem; color: var(--accent); background: none; padding: 0; margin-bottom: 1.5rem;"></i>
+                    <div class="info-item"
+                        style="height: 100%; display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); padding: 2.5rem; border-radius: 15px; overflow-wrap: anywhere; word-break: break-all;">
+                        <i class="fa-solid fa-envelope"
+                            style="font-size: 2.5rem; color: var(--accent); background: none; padding: 0; margin-bottom: 1.5rem;"></i>
                         <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem; color: white;">Email</h4>
-                        <p style="margin-top: auto; width: 100%; font-size: clamp(0.85rem, 2vw, 1rem);"><a href="mailto:nlautomobile@gmail.com" style="color: white; text-decoration: underline; display: inline-block; padding-top: 1rem;">nlautomobile@gmail.com</a></p>
+                        <p style="margin-top: auto; width: 100%; font-size: clamp(0.85rem, 2vw, 1rem);"><a
+                                href="mailto:nlautomobile@gmail.com"
+                                style="color: white; text-decoration: underline; display: inline-block; padding-top: 1rem;">nlautomobile@gmail.com</a>
+                        </p>
                     </div>
 
                     <!-- Localisation -->
-                    <div class="info-item" style="height: 100%; display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); padding: 2.5rem; border-radius: 15px;">
-                        <i class="fa-solid fa-location-dot" style="font-size: 2.5rem; color: white; background: none; padding: 0; margin-bottom: 1.5rem;"></i>
+                    <div class="info-item"
+                        style="height: 100%; display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); padding: 2.5rem; border-radius: 15px;">
+                        <i class="fa-solid fa-location-dot"
+                            style="font-size: 2.5rem; color: white; background: none; padding: 0; margin-bottom: 1.5rem;"></i>
                         <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem; color: white;">Localisation</h4>
-                        <p style="color: #ccc; margin-top: auto; display: inline-block; padding-top: 1rem;">Versailles, France ðŸ‡«ðŸ‡·</p>
+                        <p style="color: #ccc; margin-top: auto; display: inline-block; padding-top: 1rem;">Versailles,
+                            France ðŸ‡«ðŸ‡·</p>
                     </div>
                 </div>
 

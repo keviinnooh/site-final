@@ -353,20 +353,24 @@ h1 {
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 1rem;
-    font-size: 0.9rem;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
     text-transform: uppercase;
+    line-height: 1.5;
 }
 
 .hero-desc {
     color: var(--text-secondary);
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
     margin-bottom: 2.5rem;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .hero-btns {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    max-width: 600px;
 }
 
 .btn-primary {
@@ -743,6 +747,37 @@ footer {
     .faq-question {
         font-size: 1.05rem;
         padding: 1.2rem 0;
+    }
+
+    /* FIX MOBILE HERO ET CONTACTS */
+    .hero-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        white-space: normal;
+        /* Autorise le retour à la ligne */
+        word-break: break-word;
+    }
+
+    .hero-desc {
+        font-size: 0.95rem;
+        padding-right: 15px;
+        /* Eviter que le texte colle au bord droit */
+    }
+
+    .hero-btns {
+        grid-template-columns: 1fr;
+        /* 1 seule colonne de boutons sur mobile */
+        gap: 0.8rem;
+    }
+
+    /* Padding réduit pour les éléments du dashboard contact sur mobile */
+    .info-item {
+        padding: 1.5rem !important;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        /* Force le wrap sur les petits ecrans <= 280px */
     }
 }
 
