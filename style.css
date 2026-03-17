@@ -190,6 +190,11 @@
     .burger-menu {
         display: block;
     }
+    
+    /* Masquer le logo sur mobile à la demande */
+    .logo {
+        display: none !important;
+    }
 
     .nav-links {
         position: fixed;
