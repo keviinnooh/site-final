@@ -178,6 +178,8 @@
     cursor: pointer;
     padding: 0.5rem;
     margin-right: -0.5rem;
+    margin-left: auto;
+    /* S'assure de toujours le coller à droite sur mobile */
     z-index: 2000;
     position: relative;
     user-select: none;
@@ -200,7 +202,8 @@
         background: rgba(10, 10, 10, 0.98);
         backdrop-filter: blur(15px);
         flex-direction: column;
-        padding: 5rem 1.5rem 2rem;
+        padding: clamp(120px, 30vh, 200px) 1.5rem 2rem;
+        /* Commence sous le logo */
         border-left: 1px solid rgba(255, 255, 255, 0.1);
         text-align: center;
         transition: right 0.4s ease-in-out;
@@ -246,24 +249,46 @@ body {
 }
 
 .navbar {
-    position: fixed;
+    position: absolute;
+    /* Reste en haut, ne bloque pas l'écran ! */
     top: 0;
     width: 100%;
     padding: 1.5rem 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    /* Aligne le menu à la suite du logo */
+    gap: clamp(2rem, 5vw, 7rem);
+    /* L'espace entre Versailles et les mots (plus c'est grand, plus c'est éloigné) */
     align-items: center;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(15px);
+    background: transparent;
+    /* PLUS AUCUN BLOC NOIR ! */
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.5rem;
-    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.location-badge {
+    margin-left: -50px;
+    /* Rapproche fortement Versailles du logo pour qu'il soit par-dessus ou encastré */
+    z-index: 10;
+}
+
+.logo-img {
+    height: clamp(120px, 25vh, 300px);
+    /* Encore plus grand ! */
+    width: auto;
+    max-width: 40vw;
+    /* On gagne un peu de place pour le logo */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
 }
 
 .highlight {
@@ -277,10 +302,20 @@ body {
     background-clip: text;
 }
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 2vw, 2.8rem);
+    /* Espace solide entre les mots, très aéré */
+    white-space: nowrap;
+    /* Empêche strictement de passer à la ligne */
+}
+
 .nav-links a {
     color: var(--text-secondary);
     text-decoration: none;
-    margin-left: 2rem;
+    font-size: clamp(0.9rem, 1.1vw, 1.3rem);
+    /* Taille agrandie pour une lecture robuste */
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -311,20 +346,58 @@ body {
     color: white !important;
 }
 
+/* WIDGET WHATSAPP FLOTTANT */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #FFF;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 30px;
+    }
+}
+
+
 /* HERO IMAGE - AUDI (hero.png) */
 .hero {
-    height: 80vh;
-    min-height: 600px;
+    min-height: 100vh;
     width: 100%;
     background-image: url('hero.png') !important;
-    /* AUDI IMAGE */
     background-position: center center;
+    /* REMET LA PHOTO DE L'AUDI BIEN AJUSTÉE */
     background-repeat: no-repeat;
     background-size: cover;
     display: flex !important;
     align-items: center;
+    /* Centre le bloc de façon classique */
+    justify-content: center;
+    /* CENTRE HORIZONTALEMENT */
     position: relative;
-    margin-top: 60px;
+    padding-top: 0;
 }
 
 .hero-overlay {
@@ -333,29 +406,43 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 100%);
+    background: rgba(0, 0, 0, 0.75);
+    /* Assombri de façon uniforme pour texte centré */
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    padding-left: 10%;
-    max-width: 800px;
+    padding: 0 5%;
+    max-width: 1000px;
     animation: fadeInUp 1s ease-out;
+    margin-top: clamp(150px, 25vh, 260px);
+    text-align: center;
+    /* Centre le texte */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centre le bloc de boutons */
 }
 
 h1 {
     font-family: var(--font-heading);
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 8vw, 4.2rem);
+    font-weight: 300;
+    /* Look minimaliste et raffiné */
     line-height: 1.1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
+    /* Plus aéré ! */
+    letter-spacing: -1px;
+    text-transform: uppercase;
 }
 
 .hero-subtitle {
     color: var(--accent);
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    /* Plus aéré ! */
     font-size: clamp(0.7rem, 2vw, 0.9rem);
     text-transform: uppercase;
     line-height: 1.5;
@@ -370,16 +457,19 @@ h1 {
 .hero-desc {
     color: var(--text-secondary);
     font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-    max-width: 600px;
+    line-height: 1.8;
+    /* Mieux aérer les lignes du paragraphe */
+    margin-bottom: 4rem;
+    /* Grand espace avant les boutons ! */
+    max-width: 650px;
 }
 
 .hero-btns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+    /* Écarte grandement les boutons ! */
 }
 
 .btn-primary {
@@ -418,7 +508,8 @@ h1 {
     color: #000;
     /* Texte noir pour lisibilité sur or */
     text-decoration: none;
-    padding: 1rem;
+    padding: 1.2rem 3rem;
+    /* Boutons plus larges */
     border-radius: 5px;
     font-weight: 700;
     font-family: var(--font-heading);
@@ -429,8 +520,6 @@ h1 {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    height: 100%;
-    /* S'assure qu'ils remplissent la cellule de grille */
     min-height: 60px;
 }
 
@@ -442,7 +531,8 @@ h1 {
 }
 
 .container {
-    padding: 5rem 10%;
+    padding: clamp(2rem, 4vw, 3rem) 5%;
+    /* Réduit les énormes espaces de 5rem */
 }
 
 /* Car Detail Description */
@@ -460,7 +550,8 @@ h1 {
 
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    /* Réduit les 4rem d'écart de titre */
 }
 
 .section-header h2 {
@@ -734,10 +825,12 @@ footer {
     }
 
     h1 {
-        font-size: clamp(1.6rem, 8vw, 2.5rem);
-        white-space: nowrap;
-        /* Force the name to stay on one line entirely */
-        word-break: normal;
+        font-size: clamp(1.2rem, 5.5vw, 2.5rem);
+        /* Taille calculée pour rentrer sur l'écran */
+        white-space: nowrap !important;
+        /* Force STRICTEMENT sur une seule ligne (ne coupe pas !) */
+        word-break: normal !important;
+        line-height: 1.2;
     }
 
     .hero-content {
@@ -748,7 +841,8 @@ footer {
     }
 
     .container {
-        padding: 4rem 5%;
+        padding: 1.5rem 5%;
+        /* Réduit l'écran mobile */
     }
 
     /* Ajustements FAQ Mobile */
@@ -852,7 +946,7 @@ body {
 #vente {
     text-align: center;
     background: linear-gradient(to bottom, #000, var(--bg-dark));
-    padding: 6rem 0;
+    /* Padding is now mostly handled via inline style in HTML for dynamic spacing */
 }
 
 .form-container {

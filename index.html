@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            CAR <span class="highlight">DEALER</span>.
+            <img src="assets/logo_nuh_final.png" alt="NUH AUTOMOBILE" class="logo-img">
             <span class="location-badge"><img src="https://flagcdn.com/w20/fr.png" alt="France"> Versailles</span>
         </div>
         <div class="burger-menu">
@@ -42,12 +42,22 @@
     <section id="accueil" class="hero hero-home">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>NL AUTOMOBILE</h1>
+            <h1>NUH AUTOMOBILE <span class="highlight-text"
+                    style="font-size: 0.5em; display: flex; align-items: center; justify-content: center; gap: 15px; letter-spacing: 5px; margin-top: 10px;">CAR
+                    DEALER <img src="https://flagcdn.com/w40/fr.png" alt="France"
+                        style="height: 0.7em; width: auto; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);"></span>
+            </h1>
             <p class="hero-subtitle">ACHAT • VENTE • DÉPÔT-VENTE • <br class="mobile-break">RECHERCHE PERSONNALISÉE •
                 AUTO & MOTO</p>
+
+            <p class="hero-catchphrase"
+                style="font-size: clamp(1.2rem, 2vw, 1.6rem); color: white; margin-bottom: 1.5rem; font-weight: 400; font-style: italic; letter-spacing: 1px;">
+                "Trouver le véhicule de vos rêves ou vendre le vôtre n'a jamais été aussi simple."
+            </p>
+
             <p class="hero-desc">Comme une agence immobilière, nous gérons votre projet de A à Z.
                 Nous valorisons votre véhicule (2 ou 4 roues), filtrons les acheteurs et sécurisons la transaction.
-                <br><strong>0 Stress, 100% Transparent.</strong>
+                <br><strong style="color: var(--accent);">0 Stress, 100% Transparent.</strong>
             </p>
             <div class="hero-btns">
                 <a href="#achat" class="btn-grid-home">Achat Véhicule</a>
@@ -78,8 +88,7 @@
                 <div class="feature-card">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <h3>Recherche Personnalisée</h3>
-                    <p>Vous cherchez une voiture précise ? Nous scannons le marché européen pour vous trouver la perle
-                        rare.</p>
+                    <p>Vous cherchez un modèle précis ? Nous le trouvons <strong>sur commande</strong> à travers notre réseau européen.</p>
                 </div>
             </div>
         </div>
@@ -90,7 +99,7 @@
 
 
     <!-- SECTION EQUIPE -->
-    <section id="equipe" class="content-section" style="padding: 6rem 0; background: var(--bg-dark);">
+    <section id="equipe" class="content-section" style="padding: clamp(2rem, 5vw, 4rem) 0; background: var(--bg-dark);">
         <div class="container">
             <div class="section-header" style="margin-bottom: 3rem;">
                 <h2>Qui <span class="highlight-text">sommes-nous ?</span></h2>
@@ -123,7 +132,7 @@
 
     <!-- SECTION ACHAT -->
     <section id="achat" class="achat-section"
-        style="padding: 6rem 0 2rem 0; background: var(--bg-card); position: relative; overflow: hidden;">
+        style="padding: clamp(2rem, 5vw, 4rem) 0 clamp(1rem, 2vw, 2rem) 0; background: var(--bg-card); position: relative; overflow: hidden;">
         <div class="container" style="position: relative; z-index: 1;">
             <div class="section-header" style="margin-bottom: 1.5rem;">
                 <h2 style="font-size: clamp(2.5rem, 8vw, 3.5rem); margin-bottom: 0px;"><span
@@ -133,8 +142,11 @@
 
             <div class="recherche-perso"
                 style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 3rem; text-align: center;">
-                <h3 style="font-size: 1.8rem; margin-bottom: 2rem; color: white;">Recherche <span
+                <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: white;">Recherche <span
                         class="highlight-text">Personnalisée</span></h3>
+                <p style="font-size: 0.9rem; color: var(--accent); margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;">
+                    Uniquement sur commande
+                </p>
 
                 <div class="achat-steps"
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem; text-align: left;">
@@ -182,12 +194,12 @@
 
     <!-- SECTION VENTE -->
     <section id="vente" class="vente-section"
-        style="padding: 2rem 0 6rem 0; background: linear-gradient(to bottom, var(--bg-card), #000); position: relative;">
+        style="padding: clamp(1rem, 2vw, 2rem) 0 clamp(2rem, 5vw, 4rem) 0; background: linear-gradient(to bottom, var(--bg-card), #000); position: relative;">
         <div class="container" style="position: relative; z-index: 1;">
             <div class="section-header" style="margin-bottom: 1.5rem;">
                 <h2 style="font-size: clamp(2.5rem, 8vw, 3.5rem); margin-bottom: 0px;"><span
                         class="highlight-text">Vente</span></h2>
-                <p>Estimez votre véhicule gratuitement et confiez-nous la vente de A à Z.</p>
+                <p>Confiez-nous la vente de A à Z. C'est <strong>100% gratuit</strong> pour le vendeur.</p>
             </div>
 
             <div class="estimation-gratuite"
@@ -195,8 +207,7 @@
                 <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: white;">Estimation <span
                         class="highlight-text">Gratuite</span></h3>
                 <p style="color: #ccc; max-width: 600px; margin: 0 auto 3rem auto; line-height: 1.6;">
-                    Remplissez ce formulaire pour nous confier la vente de votre véhicule ou organiser un
-                    dépôt-vente sous 24h. L'estimation est gratuite, simple et sans aucun engagement.
+                    Remplissez ce formulaire pour nous confier la vente de votre véhicule.
                 </p>
 
                 <div class="form-container"
@@ -275,7 +286,7 @@
     </section>
 
     <!-- SECTION STOCK -->
-    <section id="stock" class="stock-section" style="padding: 4rem 0;">
+    <section id="stock" class="stock-section" style="padding: clamp(2rem, 5vw, 4rem) 0;">
         <div class="container">
             <div class="section-header">
                 <h2>Notre <span class="highlight-text">Showroom</span></h2>
@@ -296,7 +307,7 @@
         </div>
     </section>
 
-    <section id="avis" class="reviews-section" style="background: var(--bg-dark); padding: 4rem 0;">
+    <section id="avis" class="reviews-section" style="background: var(--bg-dark); padding: clamp(2rem, 5vw, 4rem) 0;">
         <div class="container">
             <div class="section-header">
                 <h2>Ils nous font <span class="highlight-text">Confiance</span></h2>
@@ -439,7 +450,7 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">NL AUTOMOBILE</div>
+            <div class="footer-logo">NUH AUTOMOBILE</div>
             <p>Versailles, France • <a href="https://wa.me/33761636206"
                     style="color: inherit; text-decoration: none;">07 61 63
                     62 06</a></p>
