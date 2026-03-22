@@ -830,12 +830,12 @@ footer {
     }
 
     h1 {
-        font-size: clamp(2rem, 8vw, 3rem);
-        /* Taille augmentée pour correspondre au moins aux titres H2 des sections */
+        font-size: clamp(3rem, 12vw, 4.5rem);
+        /* Extrêmement grand sur mobile pour écraser le reste ! */
         white-space: normal !important;
-        /* Autorise à nouveau le retour à la ligne naturellement avec cette grande taille pour ne pas déborder */
+        /* Reviendra automatiquement à la ligne de manière esthétique */
         word-break: normal !important;
-        line-height: 1.2;
+        line-height: 1.1;
     }
 
     .hero-content {
