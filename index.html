@@ -95,7 +95,27 @@
     </section>
 
 
+    <!-- SECTION STOCK -->
+    <section id="stock" class="stock-section" style="padding: clamp(2rem, 5vw, 4rem) 0; background: var(--bg-dark);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Notre <span class="highlight-text">Showroom</span></h2>
+                <p>Découvrez nos véhicules disponibles immédiatement. Inspectés et Garantis.</p>
+            </div>
+            <!-- Filtres simplifiés -->
+            <div class="filters-bar">
+                <button class="filter-btn active">Tout</button>
+                <button class="filter-btn">Citadines</button>
+                <button class="filter-btn">Sportives</button>
+                <button class="filter-btn">SUV</button>
+                <button class="filter-btn">Motos</button>
+            </div>
 
+            <div class="cars-grid" id="carsGrid">
+                <!-- Cars injected by JS -->
+            </div>
+        </div>
+    </section>
 
 
     <!-- SECTION EQUIPE -->
@@ -285,27 +305,6 @@
         </div>
     </section>
 
-    <!-- SECTION STOCK -->
-    <section id="stock" class="stock-section" style="padding: clamp(2rem, 5vw, 4rem) 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Notre <span class="highlight-text">Showroom</span></h2>
-                <p>Découvrez nos véhicules disponibles immédiatement. Inspectés et Garantis.</p>
-            </div>
-            <!-- Filtres simplifiés -->
-            <div class="filters-bar">
-                <button class="filter-btn active">Tout</button>
-                <button class="filter-btn">Citadines</button>
-                <button class="filter-btn">Sportives</button>
-                <button class="filter-btn">SUV</button>
-                <button class="filter-btn">Motos</button>
-            </div>
-
-            <div class="cars-grid" id="carsGrid">
-                <!-- Cars injected by JS -->
-            </div>
-        </div>
-    </section>
 
     <section id="avis" class="reviews-section" style="background: var(--bg-dark); padding: clamp(2rem, 5vw, 4rem) 0;">
         <div class="container">
@@ -374,9 +373,11 @@
         style="background-color: var(--bg-card); padding: clamp(2rem, 5vw, 4rem) 0; border-top: 1px solid rgba(255,255,255,0.05);">
         <div class="container">
             <div class="contact-info" style="margin: 0 auto; max-width: 1000px; text-align: center;">
-                <h2>Nous <span class="highlight-text">Contacter</span></h2>
-                <p style="margin-bottom: 2rem; color: var(--text-secondary);">Envoyez-nous un message pour votre projet,
-                    ou contactez-nous directement !</p>
+                <div class="section-header">
+                    <h2>Nous <span class="highlight-text">Contacter</span></h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-secondary);">Envoyez-nous un message pour votre projet,
+                        ou contactez-nous directement !</p>
+                </div>
 
                 <!-- Form -->
                 <div class="form-container"
