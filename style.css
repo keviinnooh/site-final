@@ -826,7 +826,9 @@ footer {
 
 @media (max-width: 768px) {
     .hero-home {
-        height: 70vh;
+        min-height: 100vh; /* Laisse de l'espace pour le grand texte */
+        height: auto;      
+        padding-bottom: 3rem;
     }
 
     h1 {
@@ -888,9 +890,9 @@ footer {
     }
 
     .hero-btns {
-        grid-template-columns: 1fr;
-        /* 1 seule colonne de boutons sur mobile */
-        gap: 0.8rem;
+        flex-direction: column; /* Boutons l'un au-dessus de l'autre */
+        width: 100%;
+        gap: 1.5rem;
     }
 
     /* Padding réduit pour les éléments du dashboard contact sur mobile */
