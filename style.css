@@ -830,10 +830,10 @@ footer {
     }
 
     h1 {
-        font-size: clamp(1.2rem, 5.5vw, 2.5rem);
-        /* Taille calculée pour rentrer sur l'écran */
-        white-space: nowrap !important;
-        /* Force STRICTEMENT sur une seule ligne (ne coupe pas !) */
+        font-size: clamp(2rem, 8vw, 3rem);
+        /* Taille augmentée pour correspondre au moins aux titres H2 des sections */
+        white-space: normal !important;
+        /* Autorise à nouveau le retour à la ligne naturellement avec cette grande taille pour ne pas déborder */
         word-break: normal !important;
         line-height: 1.2;
     }
@@ -869,11 +869,12 @@ footer {
 
     /* FIX MOBILE HERO ET CONTACTS */
     .hero-subtitle {
-        font-size: 0.75rem;
+        font-size: 0.95rem; /* Agrandissement du sous-titre */
         letter-spacing: 1px;
         white-space: normal;
         /* Autorise le retour à la ligne */
-        word-break: break-word;
+        word-break: normal;
+        line-height: 1.6;
     }
 
     .mobile-break {
