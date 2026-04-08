@@ -466,14 +466,12 @@ h1 {
     width: 100%; /* Prend toute la place pour garantir qu'il soit bien en dessous */
     align-items: center;
     justify-content: center;
+    gap: 8px; /* Le drapeau est collé ici mathématiquement ! */
     letter-spacing: 5px;
     margin-top: 10px;
 }
 
 .hero-flag {
-    position: absolute;
-    left: 100%;
-    margin-left: 5px; /* Le drapeau est maintenant "collé" au mot DEALER */
     height: 0.7em;
     width: auto;
     border-radius: 2px;
