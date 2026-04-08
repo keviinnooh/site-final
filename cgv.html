@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&family=Outfit:wght@300;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
     body {
     background-color: #000000 !important;
     background-image: none !important;
@@ -110,9 +111,9 @@
         </div>
 
         <div class="legal-section">
-            <h2>3. Garantie</h2>
-            <p>Sauf mention contraire, nos véhicules bénéficient d'une garantie commerciale de 3 mois (moteur, boîte,
-                pont). Des extensions de garantie peuvent être souscrites en option.</p>
+            <h2>3. Garanties Légales</h2>
+            <p>Conformément à la loi française, tous nos véhicules d'occasion bénéficient de la <strong>Garantie Légale de Conformité</strong> (présomption de défaut pendant 12 mois) et de la <strong>Garantie des Vices Cachés</strong>.</p>
+            <p><strong>Exclusions formelles :</strong> La garantie légale ne couvre en aucun cas : l'usure normale du véhicule, les pièces d'usure (plaquettes de frein, disques, pneus, embrayage, filtres, etc.), les défauts mécaniques découlant d'une utilisation anormale ou sportive, d'un défaut d'entretien par le client, ou d'aménagements/modifications non prévus (reprogrammation moteur, etc.).</p>
         </div>
 
         <div class="legal-section">
@@ -124,31 +125,66 @@
         <div class="legal-section">
             <h2>5. Réservation</h2>
             <p>Un véhicule peut être réservé moyennant le versement d'un acompte. En cas d'annulation de l'acheteur hors
-                délai légal de rétractation (si applicable), l'acompte pourra être conservé.</p>
+                cadre du droit de rétractation à distance, l'acompte (qui représente un engagement ferme) pourra être conservé par le Vendeur.</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>6. Ventes à Distance (Droit de Rétractation)</h2>
+            <p>Si la vente est conclue de manière strictement à distance (soit par internet ou par téléphone, avec livraison directe sans que l'acheteur ait pu physiquement voir et essayer le véhicule au préalable), un consommateur a le droit de se rétracter dans un délai maximal de <strong>14 jours</strong> suivant la livraison.</p>
+            <p>En cas d'exercice de ce droit de rétractation pour une vente à distance, <strong>les frais de transport et de retour du véhicule au garage sont obligatoirement et entièrement à la charge du client</strong>. Le véhicule devra être restitué dans l'état exact constaté lors de la livraison, sans dépasser le toléré kilométrique raisonnable (pour un simple essai de confirmation après réception).</p>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <h3>NL AUTOMOBILE</h3>
-                <p>Votre partenaire de confiance pour l'achat et la vente de véhicules à Versailles.</p>
+        <div class="footer-logo" style="font-family: var(--font-heading); font-size: clamp(2.5rem, 6vw, 4.5rem); color: white; margin-bottom: clamp(2rem, 5vw, 4rem); letter-spacing: 2px;">
+            NUH AUTOMOBILE
+        </div>
+
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(1.5rem, 5vw, 4rem); margin-bottom: clamp(2rem, 5vw, 4rem); text-align: left;">
+            <div style="display: flex; flex-direction: column; gap: clamp(0.5rem, 2vw, 1.2rem);">
+                <h4 style="color: white; font-size: 1.4rem; margin-bottom: 0.5rem; text-transform: uppercase;">Liens Rapides</h4>
+                <a href="index.html#accueil" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem;">Accueil</a>
+                <a href="index.html#achat" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem;">Achat Véhicule</a>
+                <a href="index.html#vente" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem;">Vente Véhicule</a>
+                <a href="stock.html" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem;">Nos Véhicules (Stock)</a>
+                <a href="index.html#contact" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem;">Contact</a>
             </div>
-            <div class="footer-col">
-                <h3>Contact</h3>
-                <p>Versailles, France<br>
-                    <a href="https://wa.me/33761636206">07 61 63 62 06 (WhatsApp)</a><br>
-                    nlautomobile@gmail.com
-                </p>
+
+            <div style="display: flex; flex-direction: column; gap: clamp(0.5rem, 2vw, 1.2rem);">
+                <h4 style="color: white; font-size: 1.4rem; margin-bottom: 0.5rem; text-transform: uppercase;">Contact</h4>
+                <div style="display: flex; align-items: flex-start; gap: 15px; color: #bbb; font-size: 1rem;">
+                    <i class="fa-solid fa-location-dot" style="margin-top: 4px; color: var(--accent);"></i>
+                    <span>Versailles, France</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px; color: #bbb; font-size: 1rem;">
+                    <i class="fa-solid fa-phone" style="color: var(--accent);"></i>
+                    <a href="tel:+33761636206" style="color: inherit; text-decoration: none; transition: color 0.3s;">07 61 63 62 06</a>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px; color: #bbb; font-size: 1rem;">
+                    <i class="fa-solid fa-envelope" style="color: var(--accent);"></i>
+                    <a href="mailto:nlautomobile@gmail.com" style="color: inherit; text-decoration: none; transition: color 0.3s;">nlautomobile@gmail.com</a>
+                </div>
             </div>
-            <div class="footer-col">
-                <h3>Légal</h3>
-                <a href="legal.html">Mentions Légales</a><br>
-                <a href="cgv.html">CGV</a>
+
+            <div style="display: flex; flex-direction: column; gap: clamp(0.5rem, 2vw, 1.2rem);">
+                <h4 style="color: white; font-size: 1.4rem; margin-bottom: 0.5rem; text-transform: uppercase;">Réseaux Sociaux</h4>
+                <a href="#" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem; display: flex; align-items: center; gap: 15px;">
+                    <i class="fa-brands fa-instagram" style="font-size: 1.4rem; color: #E1306C;"></i> Instagram
+                </a>
+                <a href="#" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem; display: flex; align-items: center; gap: 15px;">
+                    <i class="fa-brands fa-tiktok" style="font-size: 1.4rem; color: white;"></i> TikTok
+                </a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 NL AUTOMOBILE. Tous droits réservés.</p>
+
+        <div style="max-width: 1200px; margin: 0 auto; padding-top: clamp(1rem, 5vw, 3rem); border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
+            <div class="footer-legal-links" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; font-size: 0.9rem; margin-bottom: 1.5rem;">
+                <a href="legal.html" style="color: #666; text-decoration: none; transition: color 0.3s;">Mentions Légales</a>
+                <a href="cgv.html" style="color: #666; text-decoration: none; transition: color 0.3s;">CGV</a>
+            </div>
+            <p style="font-size: 0.85rem; color: #444; text-transform: uppercase; letter-spacing: 1px;">
+                &copy; 2026 NUH AUTOMOBILE - Tous droits réservés.
+            </p>
         </div>
     </footer>
     <script src="script.js"></script>
