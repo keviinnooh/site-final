@@ -119,13 +119,13 @@ const cars = [
         model: "Ténéré 700",
         trim: "Rally Edition",
         year: 2023,
-        price: "10 900 €",
+        price: "8 900 €",
         hp: "74 ch",
         fuel: "Essence",
-        images: ["https://images.yamaha-motor.eu/product/5815/05/Tenere700-Rally-Edition-Blue-Static-002.jpg?quality=80&width=1000", "https://images.yamaha-motor.eu/product/5815/05/Tenere700-Rally-Edition-Blue-Action-001.jpg?quality=80&width=1000", "https://images.yamaha-motor.eu/product/5815/05/Tenere700-Rally-Edition-Blue-Detail-003.jpg?quality=80&width=1000"],
-        km: "3 500 km",
+        images: ["tenere_blue_factory.png", "tenere_blue_factory.png", "tenere_blue_factory.png"],
+        km: "10 000 km",
         gearbox: "Manuelle",
-        color: "Heritage White",
+        color: "Icon Blue",
         category: "Motos",
         desc: "L'esprit Rallye pur. La Ténéré 700 est la référence du Trail Aventure mid-size. Moteur CP2 coupleux et fiable, suspensions à grand débattement, protection moteur renforcée. Prête pour le désert ou le quotidien.",
         options: [
@@ -138,13 +138,13 @@ const cars = [
         model: "TMAX 560",
         trim: "Tech MAX",
         year: 2024,
-        price: "14 500 €",
+        price: "10 900 €",
         hp: "47 ch",
         fuel: "Essence",
-        images: ["https://images.yamaha-motor.eu/product/5341/01/2022-Yamaha-TMAX-Tech-MAX-EU-Dark-Petrol-Studio-001-03.jpg?quality=80&width=1000", "https://images.yamaha-motor.eu/product/5341/01/2022-Yamaha-TMAX-Tech-MAX-EU-Dark-Petrol-Action-002-03.jpg?quality=80&width=1000", "https://images.yamaha-motor.eu/product/5341/01/2022-Yamaha-TMAX-Tech-MAX-EU-Power-Grey-Detail-005-03.jpg?quality=80&width=1000"],
-        km: "1 200 km",
+        images: ["tmax_560_versa_front.png", "tmax_560_versa_front.png", "tmax_560_versa_front.png"],
+        km: "15 000 km",
         gearbox: "Automatique",
-        color: "Dark Petrol",
+        color: "Gris Nardo",
         category: "Motos",
         desc: "Le Roi des Maxi-Scooters. Version Tech MAX toutes options : Bulle électrique, régulateur de vitesse, poignées chauffantes, écran TFT connecté. Performance sportive et confort absolu pour la ville et l'autoroute.",
         options: [
@@ -173,9 +173,9 @@ function renderCars(filter = 'Tout') {
             <div class="car-details">
                 <div class="car-title">${car.brand} ${car.model} <span style="font-weight:300; font-size: 0.9rem; color: #a3a3a3; display:block;">${car.trim}</span></div>
                 <div class="car-specs">
-                    <span><i class="fa-solid fa-calendar"></i> ${car.year}</span>
-                    <span><i class="fa-solid fa-gauge-high"></i> ${car.hp}</span>
-                    <span><i class="fa-solid fa-gas-pump"></i> ${car.fuel}</span>
+                    <span><i class="fa-solid fa-calendar"></i> Année : ${car.year}</span>
+                    <span><i class="fa-solid fa-gauge-high"></i> Puis : ${car.hp}</span>
+                    <span><i class="fa-solid fa-road"></i> KM : ${car.km}</span>
                 </div>
                 <div class="car-footer">
                     <span class="car-price">${car.price}</span>
