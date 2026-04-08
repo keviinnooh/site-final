@@ -1092,6 +1092,12 @@ body {
     .hero-subtitle {
         margin-bottom: 1.5rem !important;
     }
+    .mobile-break {
+        display: block !important; /* Force le saut de ligne sur mobile ! */
+    }
+    .pc-dot {
+        display: none !important; /* Cache les points de séparation puisqu'on est à la ligne */
+    }
     .hero-catchphrase {
         margin-bottom: 2rem !important;
         font-size: 1.6rem !important; /* Agrandit fortement sur mobile ! */
