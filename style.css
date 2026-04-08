@@ -1033,19 +1033,17 @@ body {
     }
 }
 
-/* SMART MOBILE HERO FIX : TEXTE INTÉGRÉ DANS LA PHOTO (SANS COUPURE) */
 @media (max-width: 768px) {
     .hero {
-        background-size: 100% auto !important; /* L'image s'incruste sur 100% de la largeur du téléphone sans être zoomée, la Moto ne sera plus jamais jetée hors-champ ! */
-        background-position: top center !important; 
+        background-size: cover !important; /* L'image s'étire parfaitement jusqu'en bas, englobant tout le texte et les boutons ! */
+        background-position: center center !important; 
         background-repeat: no-repeat !important;
-        background-color: var(--bg-dark) !important;
     }
     .hero-content {
         margin-top: 18vh !important; /* Pousse légèrement vers le bas pour ne plus chevaucher Versailles */
     }
     .hero-overlay {
-        background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(10,10,10,0.6) 50%, rgba(10,10,10,1) 85%) !important;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(10,10,10,0.4) 50%, rgba(10,10,10,0.9) 100%) !important;
     }
     /* Compresser au maximum les marges géantes pour tout intégrer DANS L'IMAGE */
     h1 {
