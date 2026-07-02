@@ -11,17 +11,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Outfit:wght@300;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="logo">
-            <img src="assets/logo_nuh_final.png" alt="KLN MOTORS" class="logo-img">
-            <span class="location-badge"><img src="https://flagcdn.com/w20/fr.png" alt="France"> Versailles</span>
+        <div class="navbar-top">
+            <div class="logo">
+                <span class="logo-text">KLN MOTORS</span>
+                <span class="location-badge">Versailles <img src="https://flagcdn.com/w20/fr.png" alt="France"></span>
+            </div>
+            <a href="https://wa.me/33761636206" class="btn-contact navbar-whatsapp"><i class="fa-brands fa-whatsapp"></i> 07 61 63 62 06</a>
         </div>
         <div class="burger-menu">
             <i class="fa-solid fa-bars"></i>
@@ -35,8 +36,6 @@
             <a href="#stock">Notre Stock</a>
             <a href="#avis">Avis</a>
             <a href="#contact">Contact</a>
-            <a href="https://wa.me/33761636206" class="btn-contact"><i class="fa-brands fa-whatsapp"></i> 07 61 63 62
-                06</a>
         </div>
     </nav>
 
@@ -71,14 +70,12 @@
                 <div class="feature-card">
                     <i class="fa-solid fa-handshake-simple"></i>
                     <h3>Gestion de Vente</h3>
-                    <p>Nous créons l'annonce pro, nous filtrons les clients et nous sécurisons la transaction. Vous
-                        n'avez rien à faire.</p>
+                    <p>Nous créons l'annonce pro, nous filtrons les clients et nous sécurisons la transaction. Vous n'avez rien à faire.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fa-solid fa-camera"></i>
                     <h3>Mise en Valeur</h3>
-                    <p>Photos HD, nettoyage, rédaction... Nous rendons votre véhicule irrésistible pour qu'il se vende
-                        vite et bien.</p>
+                    <p>Photos HD, nettoyage, rédaction... Nous rendons votre véhicule irrésistible pour qu'il se vende vite et bien.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -89,7 +86,6 @@
         </div>
     </section>
 
-    <!-- SECTION STOCK -->
     <section id="stock" class="stock-section" style="padding: clamp(2rem, 5vw, 4rem) 0; background: var(--bg-dark);">
         <div class="container">
             <div class="section-header">
@@ -103,13 +99,10 @@
                 <button class="filter-btn">SUV</button>
                 <button class="filter-btn">Motos</button>
             </div>
-            <div class="cars-grid" id="carsGrid">
-                <!-- Cars injected by JS -->
-            </div>
+            <div class="cars-grid" id="carsGrid"></div>
         </div>
     </section>
 
-    <!-- SECTION EQUIPE -->
     <section id="equipe" class="content-section" style="padding: clamp(2rem, 5vw, 4rem) 0; background: var(--bg-dark);">
         <div class="container">
             <div class="section-header" style="margin-bottom: 3rem;">
@@ -117,76 +110,40 @@
                 <p>Plus qu'un mandataire, votre partenaire automobile de confiance à Versailles.</p>
             </div>
             <div class="text-content" style="max-width: 800px; margin: 0 auto; text-align: center; color: #ccc;">
-                <p>
-                    Passionnés d'automobile et de moto depuis toujours, nous avons fondé <strong>KLN MOTORS</strong>
-                    avec une conviction simple : acheter ou vendre un véhicule ne devrait jamais être une source de
-                    stress.
-                </p>
-                <p style="margin-top: 1.5rem;">
-                    Notre mission est de rendre cette expérience <strong>plus simple, plus sûre et plus
-                        transparente</strong>
-                    pour nos clients. Forts de notre savoir-faire sur le marché Auto & 2 Roues, nous nous engageons à
-                    vous
-                    accompagner à chaque étape.
-                </p>
-                <p style="margin-top: 1.5rem;">
-                    Nous bougeons les lignes en <strong>digitalisant le métier</strong> de mandataire. Fini la paperasse
-                    inutile et les déplacements superflus : nous mettons la technologie au service de votre confort,
-                    pour une transaction fluide et efficace.
-                </p>
+                <p>Passionnés d'automobile et de moto depuis toujours, nous avons fondé <strong>KLN MOTORS</strong> avec une conviction simple : acheter ou vendre un véhicule ne devrait jamais être une source de stress.</p>
+                <p style="margin-top: 1.5rem;">Notre mission est de rendre cette expérience <strong>plus simple, plus sûre et plus transparente</strong> pour nos clients. Forts de notre savoir-faire sur le marché Auto & 2 Roues, nous nous engageons à vous accompagner à chaque étape.</p>
+                <p style="margin-top: 1.5rem;">Nous bougeons les lignes en <strong>digitalisant le métier</strong> de mandataire. Fini la paperasse inutile et les déplacements superflus : nous mettons la technologie au service de votre confort, pour une transaction fluide et efficace.</p>
             </div>
         </div>
     </section>
 
-    <!-- SECTION ACHAT -->
-    <section id="achat" class="achat-section"
-        style="padding: clamp(2rem, 5vw, 4rem) 0 clamp(1rem, 2vw, 2rem) 0; background: var(--bg-card); position: relative; overflow: hidden;">
+    <section id="achat" class="achat-section" style="padding: clamp(2rem, 5vw, 4rem) 0 clamp(1rem, 2vw, 2rem) 0; background: var(--bg-card); position: relative; overflow: hidden;">
         <div class="container" style="position: relative; z-index: 1;">
             <div class="section-header" style="margin-bottom: 1.5rem;">
-                <h2 style="font-size: clamp(2.5rem, 8vw, 3.5rem); margin-bottom: 0px;"><span
-                        class="highlight-text">Achat</span></h2>
+                <h2 style="font-size: clamp(2.5rem, 8vw, 3.5rem); margin-bottom: 0px;"><span class="highlight-text">Achat</span></h2>
                 <p>Trouvez le véhicule parfait, adapté à vos envies et à votre budget.</p>
             </div>
-            <div class="recherche-perso"
-                style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 3rem; text-align: center;">
-                <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: white;">Recherche <span
-                        class="highlight-text">Personnalisée</span></h3>
-                <p style="font-size: 0.9rem; color: var(--accent); margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;">
-                    Uniquement sur commande
-                </p>
-                <div class="achat-steps"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem; text-align: left;">
-                    <div
-                        style="background: rgba(0,0,0,0.3); padding: 2rem; border-radius: 15px; border-left: 3px solid var(--accent);">
-                        <div style="color: var(--accent); font-size: 2rem; margin-bottom: 1rem;"><i
-                                class="fa-solid fa-list-check"></i></div>
+            <div class="recherche-perso" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 3rem; text-align: center;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: white;">Recherche <span class="highlight-text">Personnalisée</span></h3>
+                <p style="font-size: 0.9rem; color: var(--accent); margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;">Uniquement sur commande</p>
+                <div class="achat-steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem; text-align: left;">
+                    <div style="background: rgba(0,0,0,0.3); padding: 2rem; border-radius: 15px; border-left: 3px solid var(--accent);">
+                        <div style="color: var(--accent); font-size: 2rem; margin-bottom: 1rem;"><i class="fa-solid fa-list-check"></i></div>
                         <h4 style="margin-bottom: 1rem; font-size: 1.2rem;">1. Définition du besoin</h4>
-                        <p style="color: #bbb; font-size: 0.95rem; line-height: 1.6;">Transmettez-nous vos critères :
-                            marque, modèle, année, options et budget maximal. Nous dressons ensemble le cahier des
-                            charges de votre futur véhicule.</p>
+                        <p style="color: #bbb; font-size: 0.95rem; line-height: 1.6;">Transmettez-nous vos critères : marque, modèle, année, options et budget maximal. Nous dressons ensemble le cahier des charges de votre futur véhicule.</p>
                     </div>
-                    <div
-                        style="background: rgba(0,0,0,0.3); padding: 2rem; border-radius: 15px; border-left: 3px solid var(--accent);">
-                        <div style="color: var(--accent); font-size: 2rem; margin-bottom: 1rem;"><i
-                                class="fa-solid fa-earth-europe"></i></div>
+                    <div style="background: rgba(0,0,0,0.3); padding: 2rem; border-radius: 15px; border-left: 3px solid var(--accent);">
+                        <div style="color: var(--accent); font-size: 2rem; margin-bottom: 1rem;"><i class="fa-solid fa-earth-europe"></i></div>
                         <h4 style="margin-bottom: 1rem; font-size: 1.2rem;">2. Recherche & Négociation</h4>
-                        <p style="color: #bbb; font-size: 0.95rem; line-height: 1.6;">Nous mobilisons notre réseau
-                            européen de professionnels. Nous filtrons, contrôlons l'historique et négocions le prix au
-                            plus juste pour vous.</p>
+                        <p style="color: #bbb; font-size: 0.95rem; line-height: 1.6;">Nous mobilisons notre réseau européen de professionnels. Nous filtrons, contrôlons l'historique et négocions le prix au plus juste pour vous.</p>
                     </div>
-                    <div
-                        style="background: rgba(0,0,0,0.3); padding: 2rem; border-radius: 15px; border-left: 3px solid var(--accent);">
-                        <div style="color: var(--accent); font-size: 2rem; margin-bottom: 1rem;"><i
-                                class="fa-solid fa-key"></i></div>
+                    <div style="background: rgba(0,0,0,0.3); padding: 2rem; border-radius: 15px; border-left: 3px solid var(--accent);">
+                        <div style="color: var(--accent); font-size: 2rem; margin-bottom: 1rem;"><i class="fa-solid fa-key"></i></div>
                         <h4 style="margin-bottom: 1rem; font-size: 1.2rem;">3. Livraison Clé en Main</h4>
-                        <p style="color: #bbb; font-size: 0.95rem; line-height: 1.6;">Une fois le véhicule validé, nous
-                            gérons son inspection sur place, son importation, et l'immatriculation française. Vous
-                            récupérez les clés sereinement.</p>
+                        <p style="color: #bbb; font-size: 0.95rem; line-height: 1.6;">Une fois le véhicule validé, nous gérons son inspection sur place, son importation, et l'immatriculation française. Vous récupérez les clés sereinement.</p>
                     </div>
                 </div>
-                <button data-tf-popup="m3jHHXAl" data-tf-opacity="100" data-tf-size="100" data-tf-iframe-props="title=Recherche Personnalisée | KLN MOTORS"
-                    class="btn-primary"
-                    style="display: inline-block; font-size: 1.1rem; padding: 1rem 3rem; border: none; font-family: inherit; font-weight: bold; cursor: pointer; transition: background-0.3s; background: var(--accent); border-radius: 8px;">
+                <button data-tf-popup="m3jHHXAl" data-tf-opacity="100" data-tf-size="100" data-tf-iframe-props="title=Recherche Personnalisée | KLN MOTORS" class="btn-primary" style="display: inline-block; font-size: 1.1rem; padding: 1rem 3rem; border: none; font-family: inherit; font-weight: bold; cursor: pointer; transition: background-0.3s; background: var(--accent); border-radius: 8px;">
                     <i class="fa-solid fa-magnifying-glass" style="margin-right: 10px;"></i> Lancer la recherche
                 </button>
                 <script src="https://embed.typeform.com/next/embed.js"></script>
@@ -194,57 +151,42 @@
         </div>
     </section>
 
-    <!-- SECTION VENTE -->
-    <section id="vente" class="vente-section"
-        style="padding: clamp(1rem, 2vw, 2rem) 0 clamp(2rem, 5vw, 4rem) 0; background: linear-gradient(to bottom, var(--bg-card), #000); position: relative;">
+    <section id="vente" class="vente-section" style="padding: clamp(1rem, 2vw, 2rem) 0 clamp(2rem, 5vw, 4rem) 0; background: linear-gradient(to bottom, var(--bg-card), #000); position: relative;">
         <div class="container" style="position: relative; z-index: 1;">
             <div class="section-header" style="margin-bottom: 1.5rem;">
-                <h2 style="font-size: clamp(2.5rem, 8vw, 3.5rem); margin-bottom: 0px;"><span
-                        class="highlight-text">Vente</span></h2>
+                <h2 style="font-size: clamp(2.5rem, 8vw, 3.5rem); margin-bottom: 0px;"><span class="highlight-text">Vente</span></h2>
                 <p>Confiez-nous la vente de A à Z. C'est <strong>100% gratuit</strong> pour le vendeur.</p>
             </div>
-            <div class="estimation-gratuite"
-                style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 3rem; text-align: center;">
-                <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: white;">Estimation <span
-                        class="highlight-text">Gratuite</span></h3>
-                <p style="color: #ccc; max-width: 600px; margin: 0 auto 3rem auto; line-height: 1.6;">
-                    Remplissez ce formulaire pour nous confier la vente de votre véhicule.
-                </p>
-                <div class="form-container"
-                    style="background: transparent; box-shadow: none; border: none; padding: 0;">
+            <div class="estimation-gratuite" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 3rem; text-align: center;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: white;">Estimation <span class="highlight-text">Gratuite</span></h3>
+                <p style="color: #ccc; max-width: 600px; margin: 0 auto 3rem auto; line-height: 1.6;">Remplissez ce formulaire pour nous confier la vente de votre véhicule.</p>
+                <div class="form-container" style="background: transparent; box-shadow: none; border: none; padding: 0;">
                     <form id="venteForm" action="https://formspree.io/f/mbddgzrj" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label>Informations Véhicule</label>
                             <div class="form-row">
-                                <input type="text" name="marque" class="form-control" placeholder="Marque (ex: Audi)"
-                                    required>
-                                <input type="text" name="modele" class="form-control" placeholder="Modèle (ex: A3)"
-                                    required>
+                                <input type="text" name="marque" class="form-control" placeholder="Marque (ex: Audi)" required>
+                                <input type="text" name="modele" class="form-control" placeholder="Modèle (ex: A3)" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-row">
                                 <input type="number" name="annee" class="form-control" placeholder="Année (ex: 2019)">
-                                <input type="text" name="kilometrage" class="form-control"
-                                    placeholder="Kilométrage (ex: 45000)">
+                                <input type="text" name="kilometrage" class="form-control" placeholder="Kilométrage (ex: 45000)">
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="finition" class="form-control"
-                                placeholder="Finition / Moteur (ex: S-Line 150ch)">
+                            <input type="text" name="finition" class="form-control" placeholder="Finition / Moteur (ex: S-Line 150ch)">
                         </div>
                         <div class="form-group">
                             <label>État & Photos</label>
                             <div class="file-upload" onclick="document.getElementById('photoInput').click()">
-                                <i class="fa-solid fa-camera fa-2x"
-                                    style="color: var(--accent); margin-bottom: 1rem;"></i>
+                                <i class="fa-solid fa-camera fa-2x" style="color: var(--accent); margin-bottom: 1rem;"></i>
                                 <p>Cliquez pour ajouter des photos (Extérieur, Intérieur, Carte Grise...)</p>
                                 <span style="font-size: 0.8rem; color: #888;">Formats: JPG, PNG. Max 5 Mo.</span>
-                                <div id="fileList" style="margin-top: 1rem; color: var(--accent); font-size: 0.9rem;">
-                                </div>
+                                <div id="fileList" style="margin-top: 1rem; color: var(--accent); font-size: 0.9rem;"></div>
                             </div>
-                            <input type="file" id="photoInput" name="photos" multiple style="display: none;"
-                                onchange="updateFileList()">
+                            <input type="file" id="photoInput" name="photos" multiple style="display: none;" onchange="updateFileList()">
                         </div>
                         <script>
                             function updateFileList() {
@@ -261,18 +203,13 @@
                             <label>Vos Coordonnées</label>
                             <div class="form-row">
                                 <input type="text" name="nom" class="form-control" placeholder="Votre Nom" required>
-                                <input type="tel" name="telephone" class="form-control" placeholder="Téléphone"
-                                    required>
+                                <input type="tel" name="telephone" class="form-control" placeholder="Téléphone" required>
                             </div>
-                            <input type="email" name="email" class="form-control" placeholder="Email"
-                                style="margin-top: 1rem;" required>
+                            <input type="email" name="email" class="form-control" placeholder="Email" style="margin-top: 1rem;" required>
                         </div>
-                        <button type="submit" id="venteSubmitBtn" class="btn-primary"
-                            style="width: 100%; margin-top: 1rem; border: none; cursor: pointer; font-size: 1.1rem; padding: 1rem;">Demander
-                            mon estimation gratuite</button>
+                        <button type="submit" id="venteSubmitBtn" class="btn-primary" style="width: 100%; margin-top: 1rem; border: none; cursor: pointer; font-size: 1.1rem; padding: 1rem;">Demander mon estimation gratuite</button>
                         <div id="venteFormMessage" style="margin-top: 1.5rem; font-size: 1rem; display: none;"></div>
-                        <p style="font-size: 0.8rem; color: #666; margin-top: 1rem;">Vos données sont confidentielles et
-                            servent uniquement à l'étude de votre dossier.</p>
+                        <p style="font-size: 0.8rem; color: #666; margin-top: 1rem;">Vos données sont confidentielles et servent uniquement à l'étude de votre dossier.</p>
                     </form>
                     <script>
                         document.getElementById('venteForm').addEventListener('submit', function (e) {
@@ -281,36 +218,34 @@
                             const btn = document.getElementById('venteSubmitBtn');
                             const msg = document.getElementById('venteFormMessage');
                             const formData = new FormData(form);
-
                             btn.disabled = true;
                             btn.textContent = 'Envoi en cours...';
-
                             fetch(form.action, {
                                 method: 'POST',
                                 body: formData,
                                 headers: { 'Accept': 'application/json' }
                             })
-                                .then(response => {
-                                    if (response.ok) {
-                                        form.reset();
-                                        document.getElementById('fileList').innerHTML = '';
-                                        msg.style.display = 'block';
-                                        msg.style.color = '#4CAF50';
-                                        msg.innerHTML = '<i class="fa-solid fa-circle-check"></i> Merci ! Votre demande d\'estimation a bien été envoyée. Nous vous répondons très vite.';
-                                        btn.textContent = 'Demander mon estimation gratuite';
-                                        btn.disabled = false;
-                                        msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                    } else {
-                                        throw new Error('Erreur réseau');
-                                    }
-                                })
-                                .catch(() => {
+                            .then(response => {
+                                if (response.ok) {
+                                    form.reset();
+                                    document.getElementById('fileList').innerHTML = '';
                                     msg.style.display = 'block';
-                                    msg.style.color = '#f44336';
-                                    msg.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Une erreur est survenue. Merci de réessayer ou de nous contacter directement.';
+                                    msg.style.color = '#4CAF50';
+                                    msg.innerHTML = '<i class="fa-solid fa-circle-check"></i> Merci ! Votre demande d\'estimation a bien été envoyée. Nous vous répondons très vite.';
                                     btn.textContent = 'Demander mon estimation gratuite';
                                     btn.disabled = false;
-                                });
+                                    msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                } else {
+                                    throw new Error('Erreur réseau');
+                                }
+                            })
+                            .catch(() => {
+                                msg.style.display = 'block';
+                                msg.style.color = '#f44336';
+                                msg.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Une erreur est survenue. Merci de réessayer ou de nous contacter directement.';
+                                btn.textContent = 'Demander mon estimation gratuite';
+                                btn.disabled = false;
+                            });
                         });
                     </script>
                 </div>
@@ -324,48 +259,32 @@
                 <h2>Ils nous font <span class="highlight-text">Confiance</span></h2>
                 <p>La satisfaction de nos clients est notre meilleure publicité.</p>
             </div>
-            <div class="reviews-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div class="review-card"
-                    style="background: var(--bg-card); padding: 2rem; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05);">
+            <div class="reviews-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="review-card" style="background: var(--bg-card); padding: 2rem; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05);">
                     <div class="stars" style="color: var(--accent); margin-bottom: 1rem;">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p style="font-style: italic; color: #ccc; margin-bottom: 1.5rem;">"J'ai acheté ma Golf VII ici.
-                        Transparence totale, historique limpide et état concours. Je recommande pour ceux qui veulent
-                        acheter sans risque."</p>
+                    <p style="font-style: italic; color: #ccc; margin-bottom: 1.5rem;">"J'ai acheté ma Golf VII ici. Transparence totale, historique limpide et état concours. Je recommande pour ceux qui veulent acheter sans risque."</p>
                     <div class="client-info">
                         <strong style="display: block; color: white;">Thomas D.</strong>
                         <span style="font-size: 0.8rem; color: #888;">Achat Golf VII - Décembre 2025</span>
                     </div>
                 </div>
-                <div class="review-card"
-                    style="background: var(--bg-card); padding: 2rem; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05);">
+                <div class="review-card" style="background: var(--bg-card); padding: 2rem; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05);">
                     <div class="stars" style="color: var(--accent); margin-bottom: 1rem;">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p style="font-style: italic; color: #ccc; margin-bottom: 1.5rem;">"Je n'arrivais pas à vendre mon
-                        Audi A1 depuis 2 mois. KLN MOTORS s'en sont occupés : photos pro, annonce
-                        claire... Partie en 4 jours."</p>
+                    <p style="font-style: italic; color: #ccc; margin-bottom: 1.5rem;">"Je n'arrivais pas à vendre mon Audi A1 depuis 2 mois. KLN MOTORS s'en sont occupés : photos pro, annonce claire... Partie en 4 jours."</p>
                     <div class="client-info">
                         <strong style="display: block; color: white;">Sarah L.</strong>
                         <span style="font-size: 0.8rem; color: #888;">Vente Audi A1 - Novembre 2025</span>
                     </div>
                 </div>
-                <div class="review-card"
-                    style="background: var(--bg-card); padding: 2rem; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05);">
+                <div class="review-card" style="background: var(--bg-card); padding: 2rem; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05);">
                     <div class="stars" style="color: var(--accent); margin-bottom: 1rem;">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <p style="font-style: italic; color: #ccc; margin-bottom: 1.5rem;">"Super expérience pour la vente
-                        de ma Classe A. Paiement sécurisé, virement reçu avant la remise des clés. Je recommande pour la
-                        tranquillité d'esprit."</p>
+                    <p style="font-style: italic; color: #ccc; margin-bottom: 1.5rem;">"Super expérience pour la vente de ma Classe A. Paiement sécurisé, virement reçu avant la remise des clés. Je recommande pour la tranquillité d'esprit."</p>
                     <div class="client-info">
                         <strong style="display: block; color: white;">Marc P.</strong>
                         <span style="font-size: 0.8rem; color: #888;">Vente Classe A - Janvier 2026</span>
@@ -375,71 +294,46 @@
         </div>
     </section>
 
-    <!-- Section Contact -->
-    <section id="contact"
-        style="background-color: var(--bg-card); padding: clamp(2rem, 5vw, 4rem) 0; border-top: 1px solid rgba(255,255,255,0.05);">
+    <section id="contact" style="background-color: var(--bg-card); padding: clamp(2rem, 5vw, 4rem) 0; border-top: 1px solid rgba(255,255,255,0.05);">
         <div class="container">
             <div class="contact-info" style="margin: 0 auto; max-width: 1000px; text-align: center;">
                 <div class="section-header">
                     <h2>Nous <span class="highlight-text">Contacter</span></h2>
-                    <p style="margin-bottom: 2rem; color: var(--text-secondary);">Envoyez-nous un message pour votre projet,
-                        ou contactez-nous directement !</p>
+                    <p style="margin-bottom: 2rem; color: var(--text-secondary);">Envoyez-nous un message pour votre projet, ou contactez-nous directement !</p>
                 </div>
-                <div class="form-container"
-                    style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: clamp(1.5rem, 5vw, 3rem); text-align: center; max-width: 800px; margin: 0 auto 4rem auto; overflow: hidden; box-sizing: border-box;">
+                <div class="form-container" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: clamp(1.5rem, 5vw, 3rem); text-align: center; max-width: 800px; margin: 0 auto 4rem auto; overflow: hidden; box-sizing: border-box;">
                     <h3 style="font-size: 1.8rem; margin-bottom: 2rem; color: white;">Envoyez un message</h3>
-                    <form action="https://formspree.io/f/mbddgzrj" method="POST"
-                        style="text-align: left; width: 100%; box-sizing: border-box;">
+                    <form action="https://formspree.io/f/mbddgzrj" method="POST" style="text-align: left; width: 100%; box-sizing: border-box;">
                         <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                            <input type="text" name="nom" class="form-control" placeholder="Votre Nom" required
-                                style="flex: 1 1 200px; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; width: 100%; box-sizing: border-box;">
-                            <input type="email" name="email" class="form-control" placeholder="Votre Email" required
-                                style="flex: 1 1 200px; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; width: 100%; box-sizing: border-box;">
+                            <input type="text" name="nom" class="form-control" placeholder="Votre Nom" required style="flex: 1 1 200px; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; width: 100%; box-sizing: border-box;">
+                            <input type="email" name="email" class="form-control" placeholder="Votre Email" required style="flex: 1 1 200px; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; width: 100%; box-sizing: border-box;">
                         </div>
                         <div class="form-group" style="margin-bottom: 1.5rem; width: 100%; box-sizing: border-box;">
-                            <input type="tel" name="telephone" class="form-control" placeholder="Votre Téléphone"
-                                style="width: 100%; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; box-sizing: border-box;">
+                            <input type="tel" name="telephone" class="form-control" placeholder="Votre Téléphone" style="width: 100%; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; box-sizing: border-box;">
                         </div>
                         <div class="form-group" style="margin-bottom: 1.5rem; width: 100%; box-sizing: border-box;">
-                            <textarea name="message" class="form-control" placeholder="Votre projet ou question..."
-                                rows="5" required
-                                style="width: 100%; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; resize: vertical; box-sizing: border-box;"></textarea>
+                            <textarea name="message" class="form-control" placeholder="Votre projet ou question..." rows="5" required style="width: 100%; padding: 1rem; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; resize: vertical; box-sizing: border-box;"></textarea>
                         </div>
-                        <button type="submit" class="btn-primary"
-                            style="width: 100%; border: none; padding: 1.2rem; font-size: 1.1rem; cursor: pointer; border-radius: 10px;">
+                        <button type="submit" class="btn-primary" style="width: 100%; border: none; padding: 1.2rem; font-size: 1.1rem; cursor: pointer; border-radius: 10px;">
                             <i class="fa-solid fa-paper-plane" style="margin-right: 10px;"></i> Envoyer le message
                         </button>
                     </form>
                 </div>
-                <div class="contact-grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-                    <div class="info-item"
-                        style="height: 100%; display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); padding: 2.5rem; border-radius: 15px;">
-                        <i class="fa-brands fa-whatsapp"
-                            style="font-size: 2.5rem; color: #25D366; background: none; padding: 0; margin-bottom: 1.5rem;"></i>
+                <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <div class="info-item" style="height: 100%; display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); padding: 2.5rem; border-radius: 15px;">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 2.5rem; color: #25D366; background: none; padding: 0; margin-bottom: 1.5rem;"></i>
                         <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem; color: white;">WhatsApp</h4>
-                        <p style="margin-top: auto; width: 100%;"><a href="https://wa.me/33761636206"
-                                class="btn-primary"
-                                style="display: inline-block; padding: 0.8rem 1.5rem; margin-top: 1rem; border-radius: 50px; background: #25D366; color: white !important; border: none; font-size: 0.9rem; white-space: nowrap;">Ouvrir</a>
-                        </p>
+                        <p style="margin-top: auto; width: 100%;"><a href="https://wa.me/33761636206" class="btn-primary" style="display: inline-block; padding: 0.8rem 1.5rem; margin-top: 1rem; border-radius: 50px; background: #25D366; color: white !important; border: none; font-size: 0.9rem; white-space: nowrap;">Ouvrir</a></p>
                     </div>
-                    <div class="info-item"
-                        style="height: 100%; display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); padding: 2.5rem; border-radius: 15px; overflow-wrap: anywhere; word-break: break-all;">
-                        <i class="fa-solid fa-envelope"
-                            style="font-size: 2.5rem; color: var(--accent); background: none; padding: 0; margin-bottom: 1.5rem;"></i>
+                    <div class="info-item" style="height: 100%; display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); padding: 2.5rem; border-radius: 15px; overflow-wrap: anywhere; word-break: break-all;">
+                        <i class="fa-solid fa-envelope" style="font-size: 2.5rem; color: var(--accent); background: none; padding: 0; margin-bottom: 1.5rem;"></i>
                         <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem; color: white;">Email</h4>
-                        <p style="margin-top: auto; width: 100%; font-size: clamp(0.85rem, 2vw, 1rem);"><a
-                                href="mailto:nlautomobile@gmail.com"
-                                style="color: white; text-decoration: underline; display: inline-block; padding-top: 1rem;">nlautomobile@gmail.com</a>
-                        </p>
+                        <p style="margin-top: auto; width: 100%; font-size: clamp(0.85rem, 2vw, 1rem);"><a href="mailto:nlautomobile@gmail.com" style="color: white; text-decoration: underline; display: inline-block; padding-top: 1rem;">nlautomobile@gmail.com</a></p>
                     </div>
-                    <div class="info-item"
-                        style="height: 100%; display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); padding: 2.5rem; border-radius: 15px;">
-                        <i class="fa-solid fa-location-dot"
-                            style="font-size: 2.5rem; color: white; background: none; padding: 0; margin-bottom: 1.5rem;"></i>
+                    <div class="info-item" style="height: 100%; display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); padding: 2.5rem; border-radius: 15px;">
+                        <i class="fa-solid fa-location-dot" style="font-size: 2.5rem; color: white; background: none; padding: 0; margin-bottom: 1.5rem;"></i>
                         <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem; color: white;">Localisation</h4>
-                        <p style="color: #ccc; margin-top: auto; display: inline-block; padding-top: 1rem;">Versailles,
-                            France 🇫🇷</p>
+                        <p style="color: #ccc; margin-top: auto; display: inline-block; padding-top: 1rem;">Versailles, France 🇫🇷</p>
                     </div>
                 </div>
             </div>
@@ -447,19 +341,17 @@
     </section>
 
     <footer style="background-color: #000; padding: clamp(2rem, 5vw, 4rem) 5% 1rem; border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center;">
-        <div class="footer-logo" style="font-family: var(--font-heading); font-size: clamp(2.5rem, 6vw, 4.5rem); color: white; margin-bottom: clamp(2rem, 5vw, 4rem); letter-spacing: 2px;">
-            KLN MOTORS
-        </div>
+        <div class="footer-logo" style="font-family: var(--font-heading); font-size: clamp(2.5rem, 6vw, 4.5rem); color: white; margin-bottom: clamp(2rem, 5vw, 4rem); letter-spacing: 2px;">KLN MOTORS</div>
         <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(1.5rem, 5vw, 4rem); margin-bottom: clamp(2rem, 5vw, 4rem); text-align: left;">
             <div style="display: flex; flex-direction: column; gap: clamp(0.5rem, 2vw, 1.2rem);">
                 <h4 style="color: white; font-size: 1.4rem; margin-bottom: 0.5rem; text-transform: uppercase;">Liens Rapides</h4>
-                <a href="#accueil" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem;">Accueil</a>
-                <a href="#services" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem;">Votre Tranquillité</a>
-                <a href="#achat" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem;">Achat Véhicule</a>
-                <a href="#vente" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem;">Vente Véhicule</a>
-                <a href="reprise.html" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem;">Reprise</a>
-                <a href="stock.html" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem;">Nos Véhicules (Stock)</a>
-                <a href="#contact" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem;">Contact</a>
+                <a href="#accueil" style="color: #bbb; text-decoration: none; font-size: 1rem;">Accueil</a>
+                <a href="#services" style="color: #bbb; text-decoration: none; font-size: 1rem;">Votre Tranquillité</a>
+                <a href="#achat" style="color: #bbb; text-decoration: none; font-size: 1rem;">Achat Véhicule</a>
+                <a href="#vente" style="color: #bbb; text-decoration: none; font-size: 1rem;">Vente Véhicule</a>
+                <a href="reprise.html" style="color: #bbb; text-decoration: none; font-size: 1rem;">Reprise</a>
+                <a href="stock.html" style="color: #bbb; text-decoration: none; font-size: 1rem;">Nos Véhicules (Stock)</a>
+                <a href="#contact" style="color: #bbb; text-decoration: none; font-size: 1rem;">Contact</a>
             </div>
             <div style="display: flex; flex-direction: column; gap: clamp(0.5rem, 2vw, 1.2rem);">
                 <h4 style="color: white; font-size: 1.4rem; margin-bottom: 0.5rem; text-transform: uppercase;">Contact</h4>
@@ -469,38 +361,29 @@
                 </div>
                 <div style="display: flex; align-items: center; gap: 15px; color: #bbb; font-size: 1rem;">
                     <i class="fa-solid fa-phone" style="color: var(--accent);"></i>
-                    <a href="tel:+33761636206" style="color: inherit; text-decoration: none; transition: color 0.3s;">07 61 63 62 06</a>
+                    <a href="tel:+33761636206" style="color: inherit; text-decoration: none;">07 61 63 62 06</a>
                 </div>
                 <div style="display: flex; align-items: center; gap: 15px; color: #bbb; font-size: 1rem;">
                     <i class="fa-solid fa-envelope" style="color: var(--accent);"></i>
-                    <a href="mailto:nlautomobile@gmail.com" style="color: inherit; text-decoration: none; transition: color 0.3s;">nlautomobile@gmail.com</a>
+                    <a href="mailto:nlautomobile@gmail.com" style="color: inherit; text-decoration: none;">nlautomobile@gmail.com</a>
                 </div>
             </div>
             <div style="display: flex; flex-direction: column; gap: clamp(0.5rem, 2vw, 1.2rem);">
                 <h4 style="color: white; font-size: 1.4rem; margin-bottom: 0.5rem; text-transform: uppercase;">Réseaux Sociaux</h4>
-                <a href="#" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem; display: flex; align-items: center; gap: 15px;">
-                    <i class="fa-brands fa-instagram" style="font-size: 1.4rem; color: #E1306C;"></i> Instagram
-                </a>
-                <a href="#" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem; display: flex; align-items: center; gap: 15px;">
-                    <i class="fa-brands fa-tiktok" style="font-size: 1.4rem; color: white;"></i> TikTok
-                </a>
-                <a href="#" style="color: #bbb; text-decoration: none; transition: color 0.3s; font-size: 1rem; display: flex; align-items: center; gap: 15px;">
-                    <i class="fa-brands fa-linkedin" style="font-size: 1.4rem; color: #0077b5;"></i> LinkedIn
-                </a>
+                <a href="#" style="color: #bbb; text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 15px;"><i class="fa-brands fa-instagram" style="font-size: 1.4rem; color: #E1306C;"></i> Instagram</a>
+                <a href="#" style="color: #bbb; text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 15px;"><i class="fa-brands fa-tiktok" style="font-size: 1.4rem; color: white;"></i> TikTok</a>
+                <a href="#" style="color: #bbb; text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 15px;"><i class="fa-brands fa-linkedin" style="font-size: 1.4rem; color: #0077b5;"></i> LinkedIn</a>
             </div>
         </div>
         <div style="max-width: 1200px; margin: 0 auto; padding-top: clamp(1rem, 5vw, 3rem); border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
-            <div class="footer-legal-links" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; font-size: 0.9rem; margin-bottom: 1.5rem;">
-                <a href="legal.html" style="color: #666; text-decoration: none; transition: color 0.3s;">Mentions Légales</a>
-                <a href="politique.html" style="color: #666; text-decoration: none; transition: color 0.3s;">Politique de Cookies</a>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; font-size: 0.9rem; margin-bottom: 1.5rem;">
+                <a href="legal.html" style="color: #666; text-decoration: none;">Mentions Légales</a>
+                <a href="politique.html" style="color: #666; text-decoration: none;">Politique de Cookies</a>
             </div>
-            <p style="font-size: 0.85rem; color: #444; text-transform: uppercase; letter-spacing: 1px;">
-                &copy; 2026 KLN MOTORS - Tous droits réservés.
-            </p>
+            <p style="font-size: 0.85rem; color: #444; text-transform: uppercase; letter-spacing: 1px;">&copy; 2026 KLN MOTORS - Tous droits réservés.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
