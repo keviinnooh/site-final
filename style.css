@@ -174,13 +174,25 @@
         position: fixed;
         top: 20px;
         right: 20px;
-        width: 45px;
-        height: 45px;
-        background: rgba(0, 0, 0, 0.6);
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.7);
         border-radius: 8px;
         backdrop-filter: blur(5px);
         margin: 0;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        z-index: 3000;
+    }
+
+    .navbar-top {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding-right: 60px;
+    }
+
+    .navbar-whatsapp {
+        font-size: 0.8rem !important;
+        padding: 0.4rem 0.9rem !important;
     }
 
     .logo {
@@ -247,13 +259,14 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 1.2rem 5%;
+    padding: 1.5rem 5%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
+    align-items: stretch;
+    gap: 1rem;
     background: transparent;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 .navbar-top {
@@ -261,41 +274,43 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .navbar-whatsapp {
     margin-left: auto;
+    flex-shrink: 0;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
 /* LOGO TEXTE KLN MOTORS */
 .logo-text {
     font-family: 'Unbounded', sans-serif;
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
     font-weight: 700;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
 /* VERSAILLES BADGE */
 .location-badge {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
     font-weight: 500;
-    padding-left: 12px;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 14px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    background: rgba(0,0,0,0.4);
-    padding: 3px 10px;
-    border-radius: 6px;
+    gap: 6px;
+    background: none;
+    padding: 0 0 0 14px;
+    border-radius: 0;
 }
 
 .location-badge img {
