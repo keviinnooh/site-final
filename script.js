@@ -159,7 +159,6 @@ function renderCars(filter = 'Tout') {
 
     carsGrid.innerHTML = '';
 
-    // Filter logic
     const filteredCars = filter === 'Tout' ? cars : cars.filter(car => car.category === filter);
 
     filteredCars.forEach(car => {
@@ -193,10 +192,8 @@ function initFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     if (filterBtns.length === 0) return;
 
-    // 1. Load saved state or default
     const savedFilter = localStorage.getItem('selectedFilter') || 'Tout';
 
-    // 2. Apply initial active state
     filterBtns.forEach(btn => {
         if (btn.textContent.trim() === savedFilter) {
             btn.classList.add('active');
@@ -204,7 +201,6 @@ function initFilters() {
             btn.classList.remove('active');
         }
 
-        // 3. Click Listener
         btn.addEventListener('click', () => {
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
@@ -215,14 +211,12 @@ function initFilters() {
         });
     });
 
-    // 4. Initial Render
     renderCars(savedFilter);
 }
 
 function loadDetail() {
-    // Récupérer l'ID dans l'URL (ex: detail.html?id=1)
     const urlParams = new URLSearchParams(window.location.search);
-    const carId = parseInt(urlParams.get('id')); // Convertir en nombre
+    const carId = parseInt(urlParams.get('id'));
 
     const car = cars.find(c => c.id === carId);
 
@@ -231,7 +225,6 @@ function loadDetail() {
         return;
     }
 
-    // Remplir les champs
     document.title = `${car.brand} ${car.model} | Les Secrets de l'Automobile`;
     document.getElementById('detailImage').src = car.images[0];
     document.getElementById('detailImageSide1').src = car.images[1] || car.images[0];
@@ -239,11 +232,10 @@ function loadDetail() {
 
     document.getElementById('detailTitle').innerHTML = `${car.brand} ${car.model} <span class="highlight-text">${car.trim}</span>`;
     document.getElementById('detailSubtitle').textContent = `${car.hp} • ${car.year} • ${car.km} • Garantie 3 mois`;
-    // Inject Description
+
     const descEl = document.getElementById('detailDesc');
     if (descEl) descEl.textContent = car.desc;
 
-    // Specs
     document.getElementById('specYear').textContent = car.year;
     document.getElementById('specKm').textContent = car.km;
     document.getElementById('specHp').textContent = car.hp;
@@ -251,19 +243,16 @@ function loadDetail() {
     document.getElementById('specFuel').textContent = car.fuel;
     document.getElementById('specColor').textContent = car.color;
 
-    // Options
     const optionsList = document.getElementById('optionsList');
-    optionsList.innerHTML = ''; // Vider la liste
+    optionsList.innerHTML = '';
     car.options.forEach(opt => {
         const li = document.createElement('li');
         li.innerHTML = `✅ ${opt}`;
         optionsList.appendChild(li);
     });
 
-    // Prix
     document.getElementById('detailPrice').textContent = car.price;
 
-    // WhatsApp Dynamic Link
     const waBtn = document.getElementById('whatsappDetailBtn');
     if (waBtn) {
         waBtn.href = `https://wa.me/33761636206?text=Bonjour,%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20${car.brand}%20${car.model}%20(${car.price})`;
@@ -271,18 +260,15 @@ function loadDetail() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if we are on stock page via presence of grid
     if (document.getElementById('carsGrid')) {
-        // renderCars(); // Handled inside initFilters now
         initFilters();
     }
 
-    // Si on est sur la page détail (on vérifie si l'élément title existe)
     if (document.getElementById('detailTitle')) {
         loadDetail();
     }
 
-    // Smooth scroll for anchors
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -292,6 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
     // Mobile Menu
     const burger = document.querySelector('.burger-menu');
     const navLinks = document.querySelector('.nav-links');
@@ -300,7 +287,18 @@ document.addEventListener('DOMContentLoaded', () => {
         burger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
 
-            // Optional: Toggle icon
+            // Bloquer le scroll du fond quand menu ouvert
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+                document.body.style.width = '100%';
+            } else {
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
+            }
+
+            // Toggle icône burger ↔ croix
             const icon = burger.querySelector('i');
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -311,10 +309,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when clicking a link
+        // Fermer le menu en cliquant sur un lien
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
                 const icon = burger.querySelector('i');
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
@@ -326,7 +327,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
-            // Close other answers
             faqQuestions.forEach(q => {
                 if (q !== question) {
                     q.classList.remove('active');
@@ -335,7 +335,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Toggle current answer
             question.classList.toggle('active');
             const answer = question.nextElementSibling;
             if (question.classList.contains('active')) {
@@ -346,14 +345,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // FAQ Tabs Logic
+    // FAQ Tabs
     const faqTabBtns = document.querySelectorAll('.faq-tab-btn');
     const faqTabContents = document.querySelectorAll('.faq-tab-content');
 
     if (faqTabBtns.length > 0) {
         faqTabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active classes
                 faqTabBtns.forEach(b => {
                     b.classList.remove('active');
                     b.style.background = 'transparent';
@@ -362,16 +360,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 faqTabContents.forEach(c => c.style.display = 'none');
 
-                // Add active class to clicked button
                 btn.classList.add('active');
                 btn.style.background = 'var(--accent)';
                 btn.style.color = 'black';
                 btn.style.border = 'none';
 
-                // Show corresponding content
                 const tabId = btn.getAttribute('data-tab');
                 document.getElementById('tab-' + tabId).style.display = 'block';
             });
         });
     }
 });
+
