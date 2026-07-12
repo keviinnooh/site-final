@@ -239,6 +239,13 @@
 
     .nav-links.active {
         right: 0;
+        overflow-y: auto !important;
+    }
+
+    body.menu-open {
+        overflow: hidden !important;
+        position: fixed;
+        width: 100%;
     }
 
     .nav-links a {
@@ -365,15 +372,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(1rem, 2vw, 2.8rem);
+    gap: clamp(0.5rem, 1.2vw, 1.8rem);
     white-space: nowrap;
     width: 100%;
+    flex-wrap: nowrap;
 }
 
 .nav-links a {
     color: #ffffff;
     text-decoration: none;
-    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    font-size: clamp(0.75rem, 1vw, 1.1rem);
     font-weight: 700;
     transition: color 0.3s;
 }
@@ -381,6 +389,16 @@ body {
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--accent);
+}
+
+/* Cacher le WhatsApp burger sur PC */
+.burger-whatsapp {
+    display: none !important;
+}
+
+/* WhatsApp navbar visible sur PC */
+.navbar-whatsapp {
+    display: inline-flex !important;
 }
 
 /* BUTTON CONTACT WHATSAPP */
