@@ -287,15 +287,11 @@ document.addEventListener('DOMContentLoaded', () => {
         burger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
 
-            // Bloquer le scroll du fond quand menu ouvert
+            // Bloquer le scroll du fond sans position:fixed pour ne pas perdre la position
             if (navLinks.classList.contains('active')) {
                 document.body.style.overflow = 'hidden';
-                document.body.style.position = 'fixed';
-                document.body.style.width = '100%';
             } else {
                 document.body.style.overflow = '';
-                document.body.style.position = '';
-                document.body.style.width = '';
             }
 
             // Toggle icône burger ↔ croix
@@ -311,14 +307,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Fermer le menu en cliquant sur un lien
         navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+
+                // Fermer le menu
                 navLinks.classList.remove('active');
                 document.body.style.overflow = '';
-                document.body.style.position = '';
-                document.body.style.width = '';
                 const icon = burger.querySelector('i');
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
+
+                // Si c'est un lien ancre (#section), scroller vers la bonne section
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        setTimeout(() => {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }, 50);
+                    }
+                }
             });
         });
     }
