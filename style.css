@@ -190,8 +190,30 @@
         padding-right: 55px;
     }
 
+    /* Logo mobile visible */
     .logo {
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .logo-text {
+        font-size: 0.95rem !important;
+        letter-spacing: 1px;
+    }
+
+    .location-badge {
+        font-size: 0.7rem !important;
+        padding-left: 8px !important;
+    }
+
+    /* Cacher WhatsApp sur mobile */
+    .navbar-whatsapp {
         display: none !important;
+    }
+
+    .navbar-top {
+        padding-right: 55px;
     }
 
     .nav-links {
