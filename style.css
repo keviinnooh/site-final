@@ -212,10 +212,6 @@
         display: none !important;
     }
 
-    .navbar-top {
-        padding-right: 55px;
-    }
-
     .nav-links {
         position: fixed;
         top: 0;
