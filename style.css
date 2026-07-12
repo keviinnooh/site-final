@@ -207,7 +207,7 @@
         padding-left: 8px !important;
     }
 
-    /* Cacher WhatsApp sur mobile */
+    /* Cacher WhatsApp navbar sur mobile */
     .navbar-whatsapp {
         display: none !important;
     }
@@ -304,6 +304,9 @@ body {
 .navbar-whatsapp {
     margin-left: auto;
     flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .logo {
@@ -396,10 +399,7 @@ body {
     display: none !important;
 }
 
-/* WhatsApp navbar visible sur PC */
-.navbar-whatsapp {
-    display: inline-flex !important;
-}
+
 
 /* BUTTON CONTACT WHATSAPP */
 .btn-contact {
